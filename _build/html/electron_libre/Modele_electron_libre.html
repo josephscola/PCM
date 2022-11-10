@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modèle de l’électron libre &#8212; Physique et Chimie de la Matière</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-ups-uvsq-15x9cmx72-rvb.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique et Chimie de la Matière</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Physique et Chimie de la Matière (PCM)
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="electron_onde.html">
+   Décrire le comportement d’un électron comme une onde
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution_3D.html">
+   Etats des électrons libres dans un édifice 3D
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="population_statistique.html">
+   Densité d’états
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/electron_libre/Modele_electron_libre.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectron_libre/Modele_electron_libre.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/electron_libre/Modele_electron_libre.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decrire-le-comportement-d-un-electron-comme-une-onde">
+   Décrire le comportement d’un électron comme une onde
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mouvement-de-l-electron-libre-equation-de-schrodinger">
+   Mouvement de l’électron libre : équation de Schrödinger
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#position-du-probleme-stationnaire">
+     Position du problème stationnaire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analogie-avec-les-phenomenes-ondulatoires">
+     Analogie avec les phénomènes ondulatoires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elements-de-justification">
+     Eléments de justification
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etats-des-electrons-libres-dans-un-edifice-3d">
+   Etats des électrons libres dans un édifice 3D
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#position-du-probleme">
+     Position du problème
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calcul-des-solutions">
+     Calcul des solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Modèle de l’électron libre</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decrire-le-comportement-d-un-electron-comme-une-onde">
+   Décrire le comportement d’un électron comme une onde
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mouvement-de-l-electron-libre-equation-de-schrodinger">
+   Mouvement de l’électron libre : équation de Schrödinger
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#position-du-probleme-stationnaire">
+     Position du problème stationnaire
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analogie-avec-les-phenomenes-ondulatoires">
+     Analogie avec les phénomènes ondulatoires
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elements-de-justification">
+     Eléments de justification
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etats-des-electrons-libres-dans-un-edifice-3d">
+   Etats des électrons libres dans un édifice 3D
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#position-du-probleme">
+     Position du problème
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calcul-des-solutions">
+     Calcul des solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="modele-de-l-electron-libre">
+<h1>Modèle de l’électron libre<a class="headerlink" href="#modele-de-l-electron-libre" title="Permalink to this headline">#</a></h1>
+<div class="section" id="decrire-le-comportement-d-un-electron-comme-une-onde">
+<h2>Décrire le comportement d’un électron comme une onde<a class="headerlink" href="#decrire-le-comportement-d-un-electron-comme-une-onde" title="Permalink to this headline">#</a></h2>
+<p>Durant le XIXème siècle se sont accumulées des preuves expérimentales  montrant tantôt le comportement ondulatoire de la lumière, tantôt son comportement corpusculaire.</p>
+<p>Au début du XXème siècle, De Broglie propose de généraliser le mouvement de tout corps ayant une énergie <span class="math notranslate nohighlight">\(E\)</span> et une quantité de mouvement <span class="math notranslate nohighlight">\(\vec{p}\)</span> à celui d’une onde de fréquence <span class="math notranslate nohighlight">\(\nu\)</span> et de longueur d’onde <span class="math notranslate nohighlight">\(\lambda\)</span>.:
+$<span class="math notranslate nohighlight">\(
+\left\{
+\begin{align}
+E &amp;= h\nu \\
+p &amp;= h/\lambda
+\end{align}
+\right.
+\)</span><span class="math notranslate nohighlight">\(
+avec \)</span>h = 6.6263\cdot 10^{-34}<span class="math notranslate nohighlight">\( J\)</span>\cdot$s représente la constante de Planck.</p>
+<p>En pratique cette description ne s’applique qu’à des particules de masse voisine de celles d’un électron.
+Pour des masses supérieures, les longueurs d’onde correspondantes n’ont pas de sens.</p>
+<p>E. Schödinger (Physicien autrichien) postule une formulation générale du mouvement ondulatoire d’une telle particule sur la base du formalisme mathématique récemment établi pour les ondes.</p>
+<p>L’état de la particule, <em>i.e.</em> son mouvement, est réprésenté par une onde, par exemple plane propagative :
+$<span class="math notranslate nohighlight">\(
+\psi (\vec{r}, t) = A e^{i(\vec{k}\cdot\vec{r} + \phi)}
+\)</span>$
+On considérera dans ce cours des états stationnaires, déterminés par l’environnement</p>
+<p>Le problème de la dynamique des électrons dans un solide est alors traité en remplaçant les particules par des ondes électroniques.</p>
+<p>La constante <span class="math notranslate nohighlight">\(A \in \mathbb {C}\)</span> est l’amplitude de l’onde électronique; elle représente la <strong>densité de probabilité de présence</strong> de la particule à la position <span class="math notranslate nohighlight">\(\vec{r}\)</span> et à l’instant <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>L’intensité <span class="math notranslate nohighlight">\(\psi\psi^*\)</span> correspond à la <strong>densité de présence</strong> (ou densité) de la particule à la position <span class="math notranslate nohighlight">\(\vec{r} = x\vec{u}_x + y\vec{u}_y+ z\vec{u}_z\)</span> :
+$<span class="math notranslate nohighlight">\(
+\psi (\vec{r})\psi(\vec{r})^* = \rho(\vec{r})
+\)</span><span class="math notranslate nohighlight">\(
+La particule ne pouvant être _intégralement_ à plusieurs endroits en même temps, \)</span>\rho(\vec{r})<span class="math notranslate nohighlight">\( est nécessairement inférieur ou égal à 1.
+Soit \)</span>\Omega<span class="math notranslate nohighlight">\( l'espace dans lequel se trouve la particule.
+En cumulant sur \)</span>\Omega<span class="math notranslate nohighlight">\( les densités locales de la particule, on obtient la particule elle-même :
+\)</span><span class="math notranslate nohighlight">\(
+\int_\Omega \rho (\vec{r}) d^3\tau = 1
+\)</span>$</p>
+</div>
+<div class="section" id="mouvement-de-l-electron-libre-equation-de-schrodinger">
+<h2>Mouvement de l’électron libre : équation de Schrödinger<a class="headerlink" href="#mouvement-de-l-electron-libre-equation-de-schrodinger" title="Permalink to this headline">#</a></h2>
+<div class="section" id="position-du-probleme-stationnaire">
+<h3>Position du problème stationnaire<a class="headerlink" href="#position-du-probleme-stationnaire" title="Permalink to this headline">#</a></h3>
+<p>Dès lors que le système a atteint son régime permanent, <em>i.e.</em> après le régime transitoire consécutif à une modification de l’environnement, les ondes électroniques sont les solutions de l’équation de Schrödinger stationnaire.
+$<span class="math notranslate nohighlight">\(
+\frac{-\hbar^2}{2m} \Delta \psi (\vec{r}) + V (\vec{r}) \psi (\vec{r}) = \mathcal{E} \psi (\vec{r}).
+\)</span>$
+Les paramètres de l’équations sont:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{E}\psi (\vec{r})\)</span> : l’énergie totale de la particule décrite par <span class="math notranslate nohighlight">\(\psi\)</span>, à la position <span class="math notranslate nohighlight">\(\vec{r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V(\vec{r})\psi\)</span> :  énergie potentielle de la particule décrite par <span class="math notranslate nohighlight">\(\psi\)</span> à la position <span class="math notranslate nohighlight">\(\vec{r}\)</span>; <span class="math notranslate nohighlight">\(V (\vec{r})\)</span> représente le potentiel d’interaction de la particule avec son environnement à la position <span class="math notranslate nohighlight">\(\vec{r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hbar = h/2\pi\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="analogie-avec-les-phenomenes-ondulatoires">
+<h3>Analogie avec les phénomènes ondulatoires<a class="headerlink" href="#analogie-avec-les-phenomenes-ondulatoires" title="Permalink to this headline">#</a></h3>
+<p>Le formalisme de l’équation reprend celui des ondes ordinaires.
+Pour mémoire, le déplacement <span class="math notranslate nohighlight">\(u(x)\)</span> au point <span class="math notranslate nohighlight">\(x\)</span> d’une corde vibrante homogène est déterminé par l’équation
+$$</p>
+<ul class="simple">
+<li><p>\frac{\mathrm{d}^2 u}{\mathrm{d} x^2} = k^2u
+$<span class="math notranslate nohighlight">\(
+où \)</span>k$ dépend des propriétés de la corde (longueur, masse linéique, raideur).</p></li>
+</ul>
+<p>Dans le cas d’un volume vibrant (<em>i.e.</em> le volume d’air dans le conduit d’une trompette), les déplacements d’air locaux, au point <span class="math notranslate nohighlight">\(\vec{r} = x\vec{u}_x + y \vec{u}_y + z \vec{u}_z\)</span>, sont déterminés de façon analogue :
+$$
+\begin{align}</p>
+<ul class="simple">
+<li><p>\left( \frac{\partial^2 u}{\partial x^2}
++ \frac{\partial^2 u}{\partial y^2}
++ \frac{\partial^2 u}{\partial z^2}
+\right)  &amp;= k^2u \</p></li>
+<li><p>\Delta u &amp;= k^2u<br />
+\end{align}
+$$</p></li>
+</ul>
+</div>
+<div class="section" id="elements-de-justification">
+<h3>Eléments de justification<a class="headerlink" href="#elements-de-justification" title="Permalink to this headline">#</a></h3>
+<p>Considérons la propagation de l’onde électronique se produit suivant <span class="math notranslate nohighlight">\(\vec{k} = k_x\vec{u}_x + k_y\vec{u}_y + k_z\vec{u}_z\)</span> :</p>
+<p>Le premier terme de l’équation de Schrödinger s’écrit :
+$<span class="math notranslate nohighlight">\(
+\begin{align}
+\frac{-\hbar^2}{2m} \Delta \psi &amp;= \frac{-\hbar^2}{2m}
+                                        \left(
+                                        \frac{\partial^2 A e^{i\vec{k}\cdot\vec{r}}}{\partial x^2}
+                                        - \frac{\partial^2 A e^{i\vec{k}\cdot\vec{r}}}{\partial y^2}
+                                        - \frac{\partial^2 A e^{i\vec{k}\cdot\vec{r}}}{\partial z^2}
+                                        \right)\\
+            &amp;= \frac{\hbar^2}{2m} \left( k_x^2 A e^{i\vec{k}\cdot\vec{r}}
+                                        + k_y^2 A e^{i\vec{k}\cdot\vec{r}}
+                                        + k_z^2 A e^{i\vec{k}\cdot\vec{r}} \right) \\
+            &amp;= \frac{\hbar^2}{2m} k^2 \psi \\
+            &amp;= \frac{\hbar^2}{2m} \frac{p^2}{\hbar^2} \psi, \qquad (p = h/\lambda \equiv \hbar k) \\
+            &amp;= \frac{\hbar^2}{2m} \frac{2m}{\hbar^2} \mathcal {E}_\mathrm{cin} \psi \\
+            &amp;= \mathcal {E}_\mathrm{cin} \psi
+\end{align}
+\)</span><span class="math notranslate nohighlight">\(
+Ainsi, le premier terme l'équation est l'énergie cinétique à la position \)</span>\vec{r}<span class="math notranslate nohighlight">\( de la particule décrite par \)</span>\psi(\vec{r})<span class="math notranslate nohighlight">\(.
+Le second terme, \)</span>V(\vec{r})\psi(\vec{r})<span class="math notranslate nohighlight">\(, est l'énergie potentielle de la particule au voisinage de la position  \)</span>\vec{r}$.
+Finalement, l’équation de Schrödinger décompose donc l’énergie totale de l’onde électronique en énergies cinétique et potentielle.
+Elle est équivalente à l’approche utilisé pour les particules vues comme des corpuscules.</p>
+</div>
+</div>
+<div class="section" id="etats-des-electrons-libres-dans-un-edifice-3d">
+<h2>Etats des électrons libres dans un édifice 3D<a class="headerlink" href="#etats-des-electrons-libres-dans-un-edifice-3d" title="Permalink to this headline">#</a></h2>
+<div class="section" id="position-du-probleme">
+<h3>Position du problème<a class="headerlink" href="#position-du-probleme" title="Permalink to this headline">#</a></h3>
+<p>Les électrons sont dits libres au sens où ils n’interagissent ni entre eux, ni avec les noyaux du système.
+Tout se passe comme si l’édifice qu’ils occupent étaient une enceinte fermée et vide;
+Le problème s’écrit alors :
+$<span class="math notranslate nohighlight">\(
+\frac{-\hbar^2}{2m} \Delta \psi + V \psi = \mathcal{E}\psi
+\)</span><span class="math notranslate nohighlight">\(
+avec
+\)</span><span class="math notranslate nohighlight">\(
+\left\{
+\begin{align}
+V (\vec{r}\in \mathrm{\acute{e}difice}) &amp;= 0\\
+    V (\vec{r}\notin \mathrm{\acute{e}difice}) &amp;\rightarrow \infty
+\end{align}
+\right.
+\)</span><span class="math notranslate nohighlight">\(
+Par sa forme infiniment profonde, ce potentiel est usuellement désigné comme un _puits de potentiel_.
+Sans erte de généralité, on considérera un édifice parallélépipédique de volume \)</span>V = L_x L_y L_z$.</p>
+</div>
+<div class="section" id="calcul-des-solutions">
+<h3>Calcul des solutions<a class="headerlink" href="#calcul-des-solutions" title="Permalink to this headline">#</a></h3>
+<p>On cherche des solutions de la forme:
+$<span class="math notranslate nohighlight">\( \psi (x,y,z) = \psi_x(x) \psi_y(y) \psi_z(z)\)</span><span class="math notranslate nohighlight">\(
+L'équation de Schrödinger peut alors être séparée en 3 équations indépendnantes correspondant à chacune des 3 directions de l'espace :
+\)</span><span class="math notranslate nohighlight">\(
+\frac{\hbar^2}{2m} \frac{\partial ^2 \psi_\alpha}{\partial \alpha^2} + \mathcal{E}_\alpha \psi_\alpha,
+\quad \alpha = x,y,z .
+\)</span><span class="math notranslate nohighlight">\(
+Ces équations admettent des solutions de la forme :
+\)</span><span class="math notranslate nohighlight">\(
+\psi_\alpha (\alpha) = A e^{ik_\alpha \alpha} + B e^{-ik_\alpha \alpha},
+\quad A, B \in \mathbb{C},\, \forall \alpha \in [0,L_\alpha]
+\)</span>$</p>
+<p>La condition au premier bord (<span class="math notranslate nohighlight">\(\psi_\alpha (0) = 0\)</span>) impose <span class="math notranslate nohighlight">\(A + B =0\)</span>.
+Il s’ensuit que la condition au second bord (<span class="math notranslate nohighlight">\(\psi_\alpha (L_\alpha) = 0\)</span>) s’exprime :
+$<span class="math notranslate nohighlight">\(
+A (e^{ik_\alpha L_\alpha} - e^{-ik_\alpha L_\alpha}) = 0 \quad
+    \Rightarrow \quad A \sin (k_\alpha L_\alpha) = 0 \quad
+    \Rightarrow \quad 
+    k_\alpha = n_\alpha \pi / L_\alpha,\, n_\alpha \in \mathbb {N}^*
+\)</span><span class="math notranslate nohighlight">\(
+Les \)</span>k_\alpha<span class="math notranslate nohighlight">\( représentent les nombres d'onde (\)</span>k \equiv 2\pi/\lambda<span class="math notranslate nohighlight">\() dans les directions \)</span>\alpha = x,y,z<span class="math notranslate nohighlight">\(, c'est-à-dire les composantes du vecteur d'onde représentant l'électron libre décrit par la solution \)</span>\psi$.</p>
+<p>Finalement, les solutions de l’équation du mouvement des électrons libres s’expriment :
+$<span class="math notranslate nohighlight">\(
+\psi (\vec{r}) = ABC \sin (\frac{n_x\pi}{L_x}x) \sin (\frac{n_y\pi}{L_y}y) \sin (\frac{n_z\pi}{L_z}z)
+\)</span><span class="math notranslate nohighlight">\(
+avec \)</span>ABC = \sqrt {8/V}<span class="math notranslate nohighlight">\( afin de respecter l'unicité de l'électron décrit par \)</span>\psi<span class="math notranslate nohighlight">\( dans l'édifice : \)</span>\int_\mathrm{\acute{e}difice}\psi (\vec{r}) \psi^* (\vec{r}) d^3\tau = 1$.</p>
+<p>Dans un édifice 1D, les solutions de l’équation de Schrödinger stationnaires sont analogues aux modes de vibration d’une corde de guitare.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">nrows</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span> <span class="p">(</span><span class="n">nrows</span> <span class="o">=</span> <span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">nrows</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span> <span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span>  <span class="n">color</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;C</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="p">(</span><span class="mf">0.92</span><span class="p">,</span> <span class="mf">0.87</span><span class="p">,</span><span class="sa">f</span><span class="s1">&#39;n = </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;C</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># use set_position</span>
+    
+    <span class="n">ax</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">spines</span> <span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span> <span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">spines</span> <span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span> <span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">spines</span> <span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span> <span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">spines</span> <span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span> <span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span> <span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">ax</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\psi$&#39;</span><span class="o">+</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1"> (x)&#39;</span><span class="p">)</span>
+            
+
+<span class="n">ax</span> <span class="p">[</span><span class="n">nrows</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span> <span class="p">(</span><span class="s1">&#39;x/L_x&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="p">[</span><span class="n">nrows</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_label_coords</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">ax</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Allure des </span><span class="si">{</span><span class="n">nrows</span><span class="si">:</span><span class="s2">d</span><span class="si">}</span><span class="s2"> premières fonctions d&#39;onde de l&#39;électron libre (1D)&quot;</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span> <span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Modele_electron_libre_15_0.png" src="../_images/Modele_electron_libre_15_0.png" />
+</div>
+</div>
+<p>Les états accessibles aux électrons libres dans le puits de potentiel sont donc définis par l’ensemble des fonctions d’ondes solutions de l’équation de Schrödinger.
+Chacun de ces états se distingue par son vecteur d’onde <span class="math notranslate nohighlight">\(\vec{k}\)</span>.
+Ces vecteurs d’onde pointent vers des positions ponctuelles constituant un réseau régulier dans l’espace réciproque.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># espace des $k$ à 2 dimensions</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span> <span class="p">(</span><span class="n">nrows</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span><span class="mi">14</span>
+<span class="n">col</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span>
+
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">col</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">m</span><span class="o">*</span><span class="n">n</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">col</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">col</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span> <span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">m</span><span class="o">-</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$n_x =  \frac</span><span class="si">{k_x}</span><span class="s1">{\pi/L_x}$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$n_y =  \frac</span><span class="si">{k_y}</span><span class="s1">{\pi/L_y}$&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span> <span class="p">(</span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span> <span class="n">xytext</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+            <span class="n">arrowprops</span> <span class="o">=</span> <span class="nb">dict</span> <span class="p">(</span><span class="n">facecolor</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mf">1.2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span> <span class="p">(</span><span class="mf">7.5</span><span class="p">,</span><span class="mf">12.2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\Vert\vec</span><span class="si">{k}</span><span class="s1">\Vert = k_F$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span> <span class="p">(</span><span class="s2">&quot;Etats accessibles aux électrons libres dans l</span><span class="se">\&#39;</span><span class="s2">espace des $k$ (2D)&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Modele_electron_libre_17_0.png" src="../_images/Modele_electron_libre_17_0.png" />
+</div>
+</div>
+<p>Chaque vecteur d’onde permis est séparé de son plus proche voisin d’une distance <span class="math notranslate nohighlight">\(\pi/L_\alpha\)</span> suivant la direction <span class="math notranslate nohighlight">\(\alpha = x, y, z\)</span>.
+De ce fait, chaque vecteur d’onde permis occupe une surface <span class="math notranslate nohighlight">\(\frac{\pi^2}{L_xL_y}\)</span> en 2D ou un volume <span class="math notranslate nohighlight">\(\frac{\pi^3}{L_xL_yL_z}\)</span> en 3D.</p>
+<p>Dans un édifice de <em>volume</em> <span class="math notranslate nohighlight">\(V\)</span> dimension <span class="math notranslate nohighlight">\(D\)</span>, on définit ainsi la <strong>densité d’états dans l’espace des <span class="math notranslate nohighlight">\(k\)</span></strong>, en tenant compte du fait qu’au maximum deux électrons <span class="math notranslate nohighlight">\((\uparrow\downarrow)\)</span> peuvent partager le même vecteur d’onde :
+$<span class="math notranslate nohighlight">\( 
+g(k) = \frac{2}{\pi^D/V}
+\)</span>$</p>
+<p>Il est commode de décrire les électrons par leur énergie de sorte qu’on définit également la ** densité d’états** en fonction de l’énergie.</p>
+<p>Dans un édifice à 3D, on l’exprime en exprimant le nombre d’états d’énergie comprise entre <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> et <span class="math notranslate nohighlight">\(\mathcal{E}+\mathrm{d}\mathcal{E}\)</span> comme le nombre d’états dans le 1/8<span class="math notranslate nohighlight">\(^\mathrm{ème}\)</span> de coquille sphérique de rayons intérieur et extérieur <span class="math notranslate nohighlight">\(k\)</span> et <span class="math notranslate nohighlight">\(k+\mathrm{d}k\)</span>,
+$<span class="math notranslate nohighlight">\(
+\begin{align}
+g^{(3D)}(\mathcal{E}) \mathrm{d}\mathcal{E} &amp;= g^{(3D)}(k) \frac{4 \pi k^2 \mathrm{d}k}{8} \\
+\Rightarrow g^{(3D)}(\mathcal {E}) &amp;= \frac{V}{2\pi^2} \left(\frac{2m}{\hbar^2}\right)^{3/2} \mathcal{E}^{1/2}
+\end{align}
+\)</span>$</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./electron_libre"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By J. Scola<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

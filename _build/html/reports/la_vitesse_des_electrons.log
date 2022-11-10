@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/home/joseph/.local/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/joseph/.local/lib/python3.8/site-packages/nbclient/client.py", line 1269, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/joseph/.local/lib/python3.8/site-packages/nbclient/util.py", line 85, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/joseph/.local/lib/python3.8/site-packages/nbclient/util.py", line 60, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/joseph/.local/lib/python3.8/site-packages/nbclient/client.py", line 707, in async_execute
+    await self.async_execute_cell(
+  File "/home/joseph/.local/lib/python3.8/site-packages/nbclient/client.py", line 1025, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/joseph/.local/lib/python3.8/site-packages/nbclient/client.py", line 919, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# conductivité typique d'un polymère 1e-12 S/cm.
+# 1 cm d'un morceau de polymère de section 0.5 x 0.5 mm²
+# sous 1 Volt est traversé par un courant
+S = 1e-12 # S/cm
+R = 1/S * 1e-2 * 1e-2 / (5e-3 * 5e-3)
+V = 1
+courant = V / R
+distance_saut = 1e-9
+nb_chaines_paralleles = 1e6
+vitesse = (courant * duree) / nb_chaines_paralleles / distance_saut
+texte_a_afficher  = "Par exemple, pour un mince morceau de plastique (chaines de polymères) de 1 cm, "
+texte_a_afficher += "aux extrémités duquel on applique une une tension de 1 V, "
+texte_a_afficher += f"la vitesse des électrons est de l'ordre de {vitesse*1e9:.2f} nm/s"
+display (Markdown (texte_a_afficher))
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Input [0;32mIn [2][0m, in [0;36m<cell line: 10>[0;34m()[0m
+[1;32m      8[0m distance_saut [38;5;241m=[39m [38;5;241m1e-9[39m
+[1;32m      9[0m nb_chaines_paralleles [38;5;241m=[39m [38;5;241m1e6[39m
+[0;32m---> 10[0m vitesse [38;5;241m=[39m (courant [38;5;241m*[39m [43mduree[49m) [38;5;241m/[39m nb_chaines_paralleles [38;5;241m/[39m distance_saut
+[1;32m     11[0m texte_a_afficher  [38;5;241m=[39m [38;5;124m"[39m[38;5;124mPar exemple, pour un mince morceau de plastique (chaines de polymères) de 1 cm, [39m[38;5;124m"[39m
+[1;32m     12[0m texte_a_afficher [38;5;241m+[39m[38;5;241m=[39m [38;5;124m"[39m[38;5;124maux extrémités duquel on applique une une tension de 1 V, [39m[38;5;124m"[39m
+
+[0;31mNameError[0m: name 'duree' is not defined
+NameError: name 'duree' is not defined
+

@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: electron_libre/electron_onde
+- file: electron_libre/schroedinger
+- file: electron_libre/solution_3D
+- file: electron_libre/population_statistique
+

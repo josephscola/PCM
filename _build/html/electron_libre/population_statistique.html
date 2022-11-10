@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Densité d’états &#8212; Physique et Chimie de la Matière</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Etats des électrons libres dans un édifice 3D" href="solution_3D.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-ups-uvsq-15x9cmx72-rvb.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique et Chimie de la Matière</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Physique et Chimie de la Matière (PCM)
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="electron_onde.html">
+   Décrire le comportement d’un électron comme une onde
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution_3D.html">
+   Etats des électrons libres dans un édifice 3D
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Densité d’états
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/electron_libre/population_statistique.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectron_libre/population_statistique.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/electron_libre/population_statistique.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Densité d’états
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#densite-g-vec-k">
+     Densité
+     <span class="math notranslate nohighlight">
+      \(g(\vec{k})\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#densite-g-mathcal-e">
+     Densité
+     <span class="math notranslate nohighlight">
+      \(g(\mathcal{E})\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#population-statistique">
+     Population statistique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energie-de-fermi">
+   Energie de Fermi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etats-occupes">
+   Etats occupés
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Densité d’états</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Densité d’états
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#densite-g-vec-k">
+     Densité
+     <span class="math notranslate nohighlight">
+      \(g(\vec{k})\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#densite-g-mathcal-e">
+     Densité
+     <span class="math notranslate nohighlight">
+      \(g(\mathcal{E})\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#population-statistique">
+     Population statistique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energie-de-fermi">
+   Energie de Fermi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etats-occupes">
+   Etats occupés
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="section" id="densite-d-etats">
+<h1>Densité d’états<a class="headerlink" href="#densite-d-etats" title="Permalink to this headline">#</a></h1>
+<div class="section" id="densite-g-vec-k">
+<h2>Densité <span class="math notranslate nohighlight">\(g(\vec{k})\)</span><a class="headerlink" href="#densite-g-vec-k" title="Permalink to this headline">#</a></h2>
+<p>Les points de l’espace des <span class="math notranslate nohighlight">\(\vec{k}\)</span> vers lesquels pointent les vecteurs d’onde des solutions de l’équation de Schrödinger sont distants les uns les autres de <span class="math notranslate nohighlight">\(\pi/L_\alpha,\quad \alpha = x,y,z\)</span> suivant les trois directions de l’espace.
+Le volume de l’espace des <span class="math notranslate nohighlight">\(\vec{k}\)</span> qu’occupe un vecteur d’onde est donc <span class="math notranslate nohighlight">\(\frac{\pi^3}{V}\)</span> (<span class="math notranslate nohighlight">\(V = L_xL_yL_z\)</span>, volume de l’édifice).
+Chaque vecteur d’onde permis peut être occupé au maximum par deux états électroniques de spins opposé(<span class="math notranslate nohighlight">\(\uparrow\downarrow\)</span>) et la densité d’état s’exprime dans un édifice de <em>volume</em> <span class="math notranslate nohighlight">\(V\)</span> dans un espace de dimensions <span class="math notranslate nohighlight">\(D\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+g(\vec{k}) = \frac{2}{\pi^D/V}.
+\]</div>
+</div>
+<div class="section" id="densite-g-mathcal-e">
+<h2>Densité <span class="math notranslate nohighlight">\(g(\mathcal{E})\)</span><a class="headerlink" href="#densite-g-mathcal-e" title="Permalink to this headline">#</a></h2>
+<p>Il est commode de décrire les électrons par leur énergie de sorte qu’on définit également la <strong>densité d’états</strong> en fonction de l’énergie.</p>
+<p>Dans un édifice à 3D, on l’exprime en exprimant le nombre d’états d’énergie comprise entre <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> et <span class="math notranslate nohighlight">\(\mathcal{E}+\mathrm{d}\mathcal{E}\)</span> comme le nombre d’états dans le 1/8<span class="math notranslate nohighlight">\(^\mathrm{ème}\)</span> de coquille sphérique de rayons intérieur et extérieur <span class="math notranslate nohighlight">\(k\)</span> et <span class="math notranslate nohighlight">\(k+\mathrm{d}k\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+g^{(3D)}(\mathcal{E}) \mathrm{d}\mathcal{E} &amp;= g^{(3D)}(k) \frac{4 \pi k^2 \mathrm{d}k}{8} \\
+\Rightarrow g^{(3D)}(\mathcal {E}) &amp;= \frac{V}{2\pi^2} \left(\frac{2m}{\hbar^2}\right)^{3/2} \mathcal{E}^{1/2}
+\end{align}
+\end{split}\]</div>
+<p>Soit <span class="math notranslate nohighlight">\(g(\mathcal{E}) \mathrm{d}\mathcal{E}\)</span> le nombre d’états dont l’énergie est comprise dans l’intervalle <span class="math notranslate nohighlight">\([\mathcal{E}, \mathcal{E}\mathrm{d}\mathcal{E}]\)</span>.
+L’énergie <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> des électrons libres étant identique à leur énergie cinétique <span class="math notranslate nohighlight">\(\frac{\hbar^2k^2}{2m}\)</span>, les vecteurs d’onde des états correspondants ont une norme comprise dans l’intervalle <span class="math notranslate nohighlight">\([k;k+\mathrm{d}k]\)</span> qui définit un huitième de coquille sphérique de volume <span class="math notranslate nohighlight">\(\mathrm{d}V_\mathrm{coq}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}V_\mathrm{coq} = \frac{1}{8} 4\pi k^2 \mathrm{d}k.
+\]</div>
+<p>On exprime alors :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+g(\mathcal{E}) \mathrm{d}\mathcal{E} &amp;= g(\vec{k})\mathrm{d}V_\mathrm{coq} \\
+g(\mathcal{E}) \frac{\hbar^2}{m}k\mathrm{d}k &amp;= \frac{2}{\pi^3V} \frac{1}{2} \pi k^2 \mathrm{d}k \\
+\rightarrow g(\mathcal{E})                   &amp;= \frac{m}{\hbar^2}\frac{k}{\pi^2V} \\
+                                             &amp;= \frac{m}{\hbar^2}\frac{(2m/\hbar^2\mathcal{E})^{1/2}}{\pi^2V}
+\end{align}
+\end{split}\]</div>
+</div>
+<div class="section" id="population-statistique">
+<h2>Population statistique<a class="headerlink" href="#population-statistique" title="Permalink to this headline">#</a></h2>
+<p>Dans tout système thermondnamique, on attribue à chaque état (<em>i.e.</em> chaque valeur énergie) une probabilité d’occurrence.
+Cette probabilité est définie comme le rapport entre le <em>nombre de configurations prises par les <span class="math notranslate nohighlight">\(N\)</span> particules du système dont l’énergie est <span class="math notranslate nohighlight">\(\mathcal{E}\)</span></em> sur le <em>nombre total de configurations</em>.
+Une assemblée d’électrons est analogue à un gaz dont les particules seraient soumises à une restriction suplémentaire : l’<em>exclusion de Pauli</em> interdit la double occupation d’un état.
+Autrement dit un état donné, défini par ses nombres quantiques, ne peut être occupé que par un et un seul électron.</p>
+<p>Le taux d’occupation d’un état d’énergie <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> est déterminé par la statistique de Fermi-Dirac :</p>
+<div class="math notranslate nohighlight">
+\[
+f_\mathrm{FD} (\mathcal{E}) = \frac {1}{1 + e^{(\mathcal{E}-\mathcal{E}_F)/k_BT}}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">E</span> <span class="o">/=</span> <span class="n">mu</span>
+
+<span class="k">def</span> <span class="nf">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span> <span class="p">((</span><span class="n">E</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">kBT</span><span class="p">))</span>
+
+    
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span> <span class="p">()</span>
+<span class="n">kBT</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;$T$ = 0 K&#39;</span><span class="p">)</span>
+
+<span class="n">kBT</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;$k_BT = \mathcal</span><span class="si">{E}</span><span class="s1">_F/10$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span>  <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span> <span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">xmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">+</span><span class="n">kBT</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span> <span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">),</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.02</span><span class="p">,</span> <span class="s1">&#39;$(\mathcal </span><span class="si">{E}</span><span class="s1">+2k_BT)/\mathcal</span><span class="si">{E}</span><span class="s1">_F$&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span> <span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">xmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">-</span> <span class="n">kBT</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">)</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.08</span><span class="p">,</span> <span class="s1">&#39;$(\mathcal </span><span class="si">{E}</span><span class="s1">-2k_BT)/\mathcal</span><span class="si">{E}</span><span class="s1">_F$&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span> <span class="p">(</span><span class="s1">&#39;$\mathcal</span><span class="si">{E}</span><span class="s1">/\mathcal</span><span class="si">{E}</span><span class="s1">_F$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="s1">&#39;$f_</span><span class="si">{FD}</span><span class="s1"> (\mathcal</span><span class="si">{E}</span><span class="s1">/\mathcal</span><span class="si">{E}</span><span class="s1">_F)$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.02</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span> <span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span> <span class="p">(</span><span class="s1">&#39;Statistique de Fermi-Dirac&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_52887/606536689.py:8: RuntimeWarning: overflow encountered in exp
+  return 1 / (1 + np.exp ((E-1)/kBT))
+</pre></div>
+</div>
+<img alt="../_images/population_statistique_6_1.png" src="../_images/population_statistique_6_1.png" />
+</div>
+</div>
+<p>A température nulle, le taux d’occupation passe brutalement de 1 (tous les états d’énergie <span class="math notranslate nohighlight">\(\mathcal{E}&lt;\mathcal{E}_F\)</span> sont occupés) à 0 (tous les états <span class="math notranslate nohighlight">\(\mathcal{E}&gt;\mathcal{E}_F\)</span> sont vides).
+A mesure que la température augmente, la fonction s’adoucit : sur l’intervalle de largeur <span class="math notranslate nohighlight">\(4k_BT\)</span> centré sur <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span>, le taux d’occupation varie de 90 % à 10 %.
+La fonction est donc d’autant plus étalée que la température est élevée.</p>
+<p>La statistique de Fermi-Dirac indique que les états de plus basse énergie étant thermodynamiquement les plus stables, ils sont peuplés en priorité.</p>
+</div>
+</div>
+<div class="section" id="energie-de-fermi">
+<h1>Energie de Fermi<a class="headerlink" href="#energie-de-fermi" title="Permalink to this headline">#</a></h1>
+<p>L’énergie des électrons de plus haute énergie de l’assemblée détermine le <em>potentiel chimique</em> <span class="math notranslate nohighlight">\(\mu\)</span> du système.
+Cette grandeur est voisine de l’énergie de Fermi <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span> qui est l’énergie caractéristique (indépendante de la température) du taux d’occupation.
+Le potentiel chimique coïncide avec l’énergie de Fermi à température nulle:</p>
+<div class="math notranslate nohighlight">
+\[\mu (T = 0\,\mathrm{K}) = \mathcal{E}_F\]</div>
+<p>L’énergie de Fermi est donc l’énergie du dernier électron à prendre place dans l’édifice.
+A température nulle,
+Soit <span class="math notranslate nohighlight">\(\mathrm{d}N\)</span> le nombre d’états occupés dont l’énergie est comprise entre <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> et <span class="math notranslate nohighlight">\(\mathcal{E} + \mathrm{d}\mathcal{E}\)</span>.
+Cette quantité est défini par le produit des états dans cet intervalle d’énergie et du taux d’occupation :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}N = g(\mathcal{E}) \mathrm{d}\mathcal{E} f_\mathrm{FD} (\mathcal{E})
+\]</div>
+<p>Ainsi le nombre total d’électrons libres <span class="math notranslate nohighlight">\(N = \int_\mathrm{cristal} \mathrm{d}N\)</span> s’exprime :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+N &amp;= \int_0^\infty g(\mathcal{E}) f_\mathrm{FD} (\mathcal{E}) \mathrm{d}\mathcal{E} \\
+  &amp;= \int_0^{\mathcal{E}_F} \frac{V}{2\pi^2} \left(\frac{2m}{\hbar^2}\right)^{3/2} \mathcal{E}^{1/2} \mathrm{d}\mathcal{E},\qquad T = 0 \,\mathrm{K} \\
+  &amp;= \frac{V}{3\pi^2} \left(\frac{2m}{\hbar^2}\right)^{3/2} \mathcal{E}_F^{3/2}
+\end{align}
+\end{split}\]</div>
+<p>En posant <span class="math notranslate nohighlight">\(n = N/V\)</span> la densité d’électrons libres, on obtient une expression de l’<em>énergie de Fermi</em> :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{E}_F = \frac{\hbar^2}{2m} (3 \pi^2 n)^{3/2}.
+\]</div>
+<p>Par suite, le <em>vecteur de Fermi</em> peut être défini comme la norme du vecteur d’’onde des électrons au niveau de Fermi :</p>
+<div class="math notranslate nohighlight">
+\[
+k_F = (3\pi^2 n)^{1/3}.
+\]</div>
+</div>
+<div class="section" id="etats-occupes">
+<h1>Etats occupés<a class="headerlink" href="#etats-occupes" title="Permalink to this headline">#</a></h1>
+<p>La statistique de Fermi-Dirac indique qu’à température nulle, les états occupés sont ceux de plus faibles énergies, soit les états dont l’énergie appartient à l’intervalle <span class="math notranslate nohighlight">\([0;\mathrm{E}_F]\)</span>.
+L’<em>étalement</em> de la distribution de probabilité induit part l’agitation thermique conduit à ce que des états occupés soient libérés par des électrons excités dans des états d’énergie supérieur à <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">g</span> <span class="p">(</span><span class="n">E</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span> <span class="p">(</span><span class="n">E</span><span class="p">)</span>
+
+<span class="n">kBT</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span> <span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">g</span> <span class="p">(</span><span class="n">E</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">axxlim</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xlim</span> <span class="p">()</span>
+<span class="n">axylim</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span> <span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.99</span><span class="o">/</span><span class="n">axylim</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span> <span class="o">=</span> <span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">))</span>
+
+<span class="c1">#ax.plot (E, g (E) * f_FD (E, kBT), color = &#39;C2&#39;)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">g</span> <span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">*</span> <span class="n">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="s2">&quot;densité d&#39;états&quot;</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span> <span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="s2">&quot;taux d&#39;occupation $f_\mathrm</span><span class="si">{FD}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.98</span><span class="o">*</span><span class="n">axxlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.8</span><span class="o">*</span><span class="n">axxlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.2</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span> <span class="o">=</span> <span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mathcal</span><span class="si">{E}</span><span class="s1">/\mathcal</span><span class="si">{E}</span><span class="s1">_F$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span> <span class="p">(</span><span class="s1">&#39;Etats occupés par des électrons libres dans un édifice 3D&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.02</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/population_statistique_12_0.png" src="../_images/population_statistique_12_0.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./electron_libre"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="solution_3D.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Etats des électrons libres dans un édifice 3D</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By J. Scola<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

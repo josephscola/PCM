@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouvement de l’électron libre : équation de Schrödinger &#8212; Physique et Chimie de la Matière</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-ups-uvsq-15x9cmx72-rvb.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique et Chimie de la Matière</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Physique et Chimie de la Matière (PCM)
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="electron_onde.html">
+   Décrire le comportement d’un électron comme une onde
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution_3D.html">
+   Etats des électrons libres dans un édifice 3D
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="population_statistique.html">
+   Densité d’états
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/electron_libre/shroedinger.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectron_libre/shroedinger.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/electron_libre/shroedinger.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#position-du-probleme-stationnaire">
+   Position du problème stationnaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analogie-avec-les-phenomenes-ondulatoires">
+   Analogie avec les phénomènes ondulatoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elements-de-justification">
+   Eléments de justification
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Mouvement de l’électron libre : équation de Schrödinger</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#position-du-probleme-stationnaire">
+   Position du problème stationnaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analogie-avec-les-phenomenes-ondulatoires">
+   Analogie avec les phénomènes ondulatoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elements-de-justification">
+   Eléments de justification
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="section" id="mouvement-de-l-electron-libre-equation-de-schrodinger">
+<h1>Mouvement de l’électron libre : équation de Schrödinger<a class="headerlink" href="#mouvement-de-l-electron-libre-equation-de-schrodinger" title="Permalink to this headline">#</a></h1>
+<div class="section" id="position-du-probleme-stationnaire">
+<h2>Position du problème stationnaire<a class="headerlink" href="#position-du-probleme-stationnaire" title="Permalink to this headline">#</a></h2>
+<p>Dès lors que le système a atteint son régime permanent, <em>i.e.</em> après le régime transitoire consécutif à une modification de l’environnement, les ondes électroniques sont les solutions de l’équation de Schrödinger stationnaire.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{-\hbar^2}{2m} \Delta \psi (\vec{r}) + V (\vec{r}) \psi (\vec{r}) = \mathcal{E} \psi (\vec{r}).
+\]</div>
+<p>Les paramètres de l’équations sont:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{E}\psi (\vec{r})\)</span> : l’énergie totale de la particule décrite par <span class="math notranslate nohighlight">\(\psi\)</span>, à la position <span class="math notranslate nohighlight">\(\vec{r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V(\vec{r})\psi\)</span> :  énergie potentielle de la particule décrite par <span class="math notranslate nohighlight">\(\psi\)</span> à la position <span class="math notranslate nohighlight">\(\vec{r}\)</span>; <span class="math notranslate nohighlight">\(V (\vec{r})\)</span> représente le potentiel d’interaction de la particule avec son environnement à la position <span class="math notranslate nohighlight">\(\vec{r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hbar = h/2\pi\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="analogie-avec-les-phenomenes-ondulatoires">
+<h2>Analogie avec les phénomènes ondulatoires<a class="headerlink" href="#analogie-avec-les-phenomenes-ondulatoires" title="Permalink to this headline">#</a></h2>
+<p>Le formalisme de l’équation reprend celui des ondes ordinaires.
+Pour mémoire, le déplacement <span class="math notranslate nohighlight">\(u(x)\)</span> au point <span class="math notranslate nohighlight">\(x\)</span> d’une corde vibrante homogène est déterminé par l’équation</p>
+<div class="math notranslate nohighlight">
+\[
+- \frac{\mathrm{d}^2 u}{\mathrm{d} x^2} = k^2u
+\]</div>
+<p>où <span class="math notranslate nohighlight">\(k\)</span> dépend des propriétés de la corde (longueur, masse linéique, raideur).</p>
+<p>Dans le cas d’un volume vibrant (<em>i.e.</em> le volume d’air dans le conduit d’une trompette), les déplacements d’air locaux, au point <span class="math notranslate nohighlight">\(\vec{r} = x\vec{u}_x + y \vec{u}_y + z \vec{u}_z\)</span>, sont déterminés de façon analogue :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+- \left( \frac{\partial^2 u}{\partial x^2}
+                    + \frac{\partial^2 u}{\partial y^2}
+                    + \frac{\partial^2 u}{\partial z^2} 
+               \right)  &amp;= k^2u \\
+- \Delta u &amp;= k^2u          
+\end{align}
+\end{split}\]</div>
+</div>
+<div class="section" id="elements-de-justification">
+<h2>Eléments de justification<a class="headerlink" href="#elements-de-justification" title="Permalink to this headline">#</a></h2>
+<p>Considérons la propagation de l’onde électronique se produit suivant <span class="math notranslate nohighlight">\(\vec{k} = k_x\vec{u}_x + k_y\vec{u}_y + k_z\vec{u}_z\)</span> :</p>
+<p>Le premier terme de l’équation de Schrödinger s’écrit :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\frac{-\hbar^2}{2m} \Delta \psi &amp;= \frac{-\hbar^2}{2m}
+                                        \left(
+                                        \frac{\partial^2 A e^{i\vec{k}\cdot\vec{r}}}{\partial x^2}
+                                        - \frac{\partial^2 A e^{i\vec{k}\cdot\vec{r}}}{\partial y^2}
+                                        - \frac{\partial^2 A e^{i\vec{k}\cdot\vec{r}}}{\partial z^2}
+                                        \right)\\
+            &amp;= \frac{\hbar^2}{2m} \left( k_x^2 A e^{i\vec{k}\cdot\vec{r}}
+                                        + k_y^2 A e^{i\vec{k}\cdot\vec{r}}
+                                        + k_z^2 A e^{i\vec{k}\cdot\vec{r}} \right) \\
+            &amp;= \frac{\hbar^2}{2m} k^2 \psi \\
+            &amp;= \frac{\hbar^2}{2m} \frac{p^2}{\hbar^2} \psi, \qquad (p = h/\lambda \equiv \hbar k) \\
+            &amp;= \frac{\hbar^2}{2m} \frac{2m}{\hbar^2} \mathcal {E}_\mathrm{cin} \psi \\
+            &amp;= \mathcal {E}_\mathrm{cin} \psi
+\end{align}
+\end{split}\]</div>
+<p>Ainsi, le premier terme l’équation est l’énergie cinétique à la position <span class="math notranslate nohighlight">\(\vec{r}\)</span> de la particule décrite par <span class="math notranslate nohighlight">\(\psi(\vec{r})\)</span>.
+Le second terme, <span class="math notranslate nohighlight">\(V(\vec{r})\psi(\vec{r})\)</span>, est l’énergie potentielle de la particule au voisinage de la position  <span class="math notranslate nohighlight">\(\vec{r}\)</span>.
+Finalement, l’équation de Schrödinger décompose donc l’énergie totale de l’onde électronique en énergies cinétique et potentielle.
+Elle est équivalente à l’approche utilisé pour les particules vues comme des corpuscules.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./electron_libre"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By J. Scola<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

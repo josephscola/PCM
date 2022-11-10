@@ -1,0 +1,1 @@
+calcul de g(E), E_F, k_F à 2 dimensions

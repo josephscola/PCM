@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulk conductive polymers &#8212; Physique et Chimie de la Matière</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-ups-uvsq-15x9cmx72-rvb.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique et Chimie de la Matière</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Physique et Chimie de la Matière (PCM)
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electron_libre/electron_onde.html">
+   Décrire le comportement d’un électron comme une onde
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electron_libre/solution_3D.html">
+   Etats des électrons libres dans un édifice 3D
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electron_libre/population_statistique.html">
+   Densité d’états
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/polymeres_conducteurs/notes_de_prospection_2022.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpolymeres_conducteurs/notes_de_prospection_2022.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/polymeres_conducteurs/notes_de_prospection_2022.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Bulk conductive polymers
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intrinsicly-conductive-polymers">
+     Intrinsicly conductive polymers
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conducteurs-ioniques">
+       Conducteurs ioniques
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conducteurs-electroniques">
+       Conducteurs électroniques
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#origine-de-la-conduction-des-polymeres-polyinsatures">
+         Origine de la conduction des polymères polyinsaturés
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conductor-filled-insulating-polymers">
+     Conductor filled insulating polymers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nanostructured-conductive-polymers">
+   Nanostructured conductive polymers
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#barriers-to-applications">
+     Barriers to applications
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#omnexus-plastic-elastomers-database">
+     Omnexus : plastic &amp; elastomers database
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#polar-plastics-vs-non-polar-plastics">
+       Polar Plastics Vs Non-polar Plastics
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heritier-s-book">
+     Héritier’s book
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lectures-rapides-a-la-bibli">
+     Lectures rapides à la bibli…
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instabilite-de-pieirls-et-dimerisation-par-tigh-binding-model">
+   Instabilité de Pieirls et dimérisation par tigh-binding model ???
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fontaille-gnanou-et-six">
+     Fontaille, Gnanou et Six
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nanoparticules-dispersees-dans-polymeres">
+     Nanoparticules dispersées dans polymères
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Bulk conductive polymers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Bulk conductive polymers
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intrinsicly-conductive-polymers">
+     Intrinsicly conductive polymers
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conducteurs-ioniques">
+       Conducteurs ioniques
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conducteurs-electroniques">
+       Conducteurs électroniques
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#origine-de-la-conduction-des-polymeres-polyinsatures">
+         Origine de la conduction des polymères polyinsaturés
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conductor-filled-insulating-polymers">
+     Conductor filled insulating polymers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nanostructured-conductive-polymers">
+   Nanostructured conductive polymers
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#barriers-to-applications">
+     Barriers to applications
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#omnexus-plastic-elastomers-database">
+     Omnexus : plastic &amp; elastomers database
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#polar-plastics-vs-non-polar-plastics">
+       Polar Plastics Vs Non-polar Plastics
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heritier-s-book">
+     Héritier’s book
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lectures-rapides-a-la-bibli">
+     Lectures rapides à la bibli…
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instabilite-de-pieirls-et-dimerisation-par-tigh-binding-model">
+   Instabilité de Pieirls et dimérisation par tigh-binding model ???
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fontaille-gnanou-et-six">
+     Fontaille, Gnanou et Six
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nanoparticules-dispersees-dans-polymeres">
+     Nanoparticules dispersées dans polymères
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="bulk-conductive-polymers">
+<h1>Bulk conductive polymers<a class="headerlink" href="#bulk-conductive-polymers" title="Permalink to this headline">#</a></h1>
+<div class="section" id="intrinsicly-conductive-polymers">
+<h2>Intrinsicly conductive polymers<a class="headerlink" href="#intrinsicly-conductive-polymers" title="Permalink to this headline">#</a></h2>
+<p>A l’état pur, ces matériaux sont d’excellents isolants électriques : <span class="math notranslate nohighlight">\(\sigma = 10^{-10} - 10^{-20}\)</span> S<span class="math notranslate nohighlight">\(\cdot\)</span>cm<span class="math notranslate nohighlight">\(^{-1}\)</span>.
+L’essentielle de la conductivité résiduelle est due aux traces d’impuretés conductrices (<em>e.g.</em> eau).</p>
+<div class="section" id="conducteurs-ioniques">
+<h3>Conducteurs ioniques<a class="headerlink" href="#conducteurs-ioniques" title="Permalink to this headline">#</a></h3>
+<p>Electrolyte dissous dans un polymère solide dont la structure moléculaire conduit à la dissociation du sel en ions.
+$<span class="math notranslate nohighlight">\(
+\sigma \equiv \sum_i \sigma_i = \sum_i n_i q_i \mu_i
+\)</span>$</p>
+<p>Capacité d’un solvant à provoquer la dissociation d’une paire d’ions saline en ions libres est déterminée principalement par la constante diélectrique du milieu et son pouvoir solvatant vi-à-vis des ions des du sel.
+Dans le cas des solvants à fort pouvoir solvatant, le cation issu de la dissociation du sel est entouré d’un cortège de molécules de solvant fortement liées. En conséquence la <strong>mobilité de l’ion dissous est fortement réduite</strong>.
+Un compromis est nécessaire.</p>
+<p>Dans un milieu polymère les mécanismes de conduction ioniques sont :</p>
+<ul class="simple">
+<li><p>saut de cations de site en site par solvatation- désolvatation le long des chaînes : les cations se coordinent sur les charges ou les hétéroatomes des chaînes.</p></li>
+<li><p>mouvements locaux de courtes séquences du polymère favorisant le déplacement des cations ; <em>i.e.</em> rapprochant les sites de coordination potentielle.</p></li>
+</ul>
+<p>Système performant : Poly-oxyde d’éthylène (PEO) dans lequel se dissout un sel de lithium.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T_\mathrm{melt} = +65\)</span> °C</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_\mathrm{glass}= - 60\)</span> °C</p></li>
+<li><p><span class="math notranslate nohighlight">\(\epsilon_r = 5\)</span> à 25 °C</p></li>
+<li><p>grand pouvoir solvatant
+La nature macromoléculaire du PEO rend les chaînes trop encombrantes pour être entraînées avec les cations.</p></li>
+</ul>
+<p>On choisit les contre-ions Cl<span class="math notranslate nohighlight">\(^-_4\)</span>, CF<span class="math notranslate nohighlight">\(_3\)</span>SO<span class="math notranslate nohighlight">\(^-_3\)</span>, AsF<span class="math notranslate nohighlight">\(^-_6\)</span>, (CF<span class="math notranslate nohighlight">\(_3\)</span>SO<span class="math notranslate nohighlight">\(_2\)</span>)<span class="math notranslate nohighlight">\(_2\)</span>N<span class="math notranslate nohighlight">\(^-\)</span> (<span class="math notranslate nohighlight">\(\cdots\)</span>) pour être :</p>
+<ul class="simple">
+<li><p>suffisamment volumineux</p></li>
+<li><p>peu attractif électrostatiquement du fait de leur grande délocalisation.</p></li>
+</ul>
+<p>La <strong>viscosité</strong> du milieu polymère réduit la mobilité des cations (pertes résistives par friction visquese).</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T &lt; T_\mathrm{melt}\)</span> : conductivité faible, type Arrhénius (activation thermique).
+On cherche donc en pratique à réduire le taux de cristallinité initial (X = 0.6 à 0.8) : copolymérisation et/ou incorporation deplastifiant.</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_\mathrm{melt} &lt; T &lt; T_\mathrm{glass}\)</span> : conductivité type Williams-Landell-Ferry
+(<a class="reference external" href="https://www.polymerdatabase.com/polymer%20physics/WLF.html">WLF</a>), <em>i.e.</em> dominée par la <strong>viscosité</strong></p></li>
+<li><p><span class="math notranslate nohighlight">\(T &lt; T\)</span>_mathrm{glass}$ : une charge par des minéraux ou la réticulation partielle permet d’assurer la tenue mécanique dans le régime verre fondu.</p></li>
+</ul>
+<p>Les conductivité atteintes sont de l’ordre de <span class="math notranslate nohighlight">\(10^{-3}\)</span> S<span class="math notranslate nohighlight">\(\cdot\)</span> cm<span class="math notranslate nohighlight">\(^{-1}\)</span>.
+A comparer avec des références des <a class="reference external" href="https://www.techniques-ingenieur.fr/base-documentaire/sciences-fondamentales-th8/proprietes-electriques-et-electrochimiques-42336210/conductivite-des-electrolytes-k840/">électrolytes liquides</a></p>
+<p>Application au stockage (fuel cell, batterie solide) :</p>
+<ul class="simple">
+<li><p>cathode-source = Li métal ou Li/Al</p></li>
+<li><p>PEO + sel de Li</p></li>
+<li><p>anode-puits = V<span class="math notranslate nohighlight">\(_2\)</span>O<span class="math notranslate nohighlight">\(_5\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="conducteurs-electroniques">
+<h3>Conducteurs électroniques<a class="headerlink" href="#conducteurs-electroniques" title="Permalink to this headline">#</a></h3>
+<p>“Les polymères conducteurs électroniques sont des polymères conjugués, <em>i.e.</em> systèmes dont la structure moléculaire présente des enchaînements de <strong>groupes insaturés</strong> conjugués qui, par la forte délocalisation des électrons <span class="math notranslate nohighlight">\(\pi\)</span> issus de l’hybridation <span class="math notranslate nohighlight">\(sp^2\)</span> des atomes successifs, forment des voies le long desquelles les électrons vont pouvoir se déplacer.”
+<a class="reference external" href="https://123dok.net/article/polym%C3%A8res-conjugu%C3%A9s-transition-mat%C3%A9riau-semi-conducteur-mat%C3%A9riau.zx5x8ned">Polymère conjugué</a>: sa structure consiste en une succession de simples et de doubles liaisons.
+Voir aussi <a class="reference external" href="https://www.polymerdatabase.com/polymer%20physics/Polymer%20Conductivity2.html">polymeredatabase.com</a></p>
+<p><img alt="" src="../_images/C_hybridation.png" />
+<img alt="" src="../_images/poly_conjugues.png" />
+En pratique, les conductivités sont faibles (<span class="math notranslate nohighlight">\(10^{-6} - 10^{10}\)</span>) du fait du gap de 1.5 à 2.5 eV entre l’énergie des couches orbitalaires occupées les plus élevées (Highest Occupied Molecular Orbitals, HOMO) et les couches inoccupées les plus basses (Lowest Unoccupied Molecular Orbitals, LUMO).
+La bande interdite peut être diminuée par accroissement de la longueur de conjugaison.</p>
+<div class="section" id="origine-de-la-conduction-des-polymeres-polyinsatures">
+<h4>Origine de la conduction des polymères polyinsaturés<a class="headerlink" href="#origine-de-la-conduction-des-polymeres-polyinsatures" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>conduction activée par la température</p></li>
+<li><p>oxydation ou réduction introduit des porteurs délocalisés à des énergies intermédiaires entre HOMO et LUMO. Par abus, on parle de dopage (2 types).</p></li>
+</ul>
+<p>fort dopage + forte orientation des chaînes <span class="math notranslate nohighlight">\(\rightarrow\)</span> conductivité équivalentes à celle des métaux</p>
+<p><strong>Oxydation (dopage n)</strong></p>
+<ul class="simple">
+<li><p>Polymère = polyalcynes et poly-<span class="math notranslate nohighlight">\(p\)</span>-phénylène (PPP)</p></li>
+<li><p>Dopants =</p>
+<ul>
+<li><p>métaux alkalins (Li, Na, K),</p></li>
+<li><p>anions-radicaux (naphalène-sodium, anthracène-potassium, benzophénone-sodium, <span class="math notranslate nohighlight">\(\dots\)</span>)</p></li>
+</ul>
+</li>
+</ul>
+<p>Mécanismes de dopage</p>
+<blockquote>
+<div><p>(polymère) + Métal <span class="math notranslate nohighlight">\(\rightarrow\)</span> (Polymère<span class="math notranslate nohighlight">\(^{\circ-}\)</span>), Métal<span class="math notranslate nohighlight">\(^+\)</span></p>
+</div></blockquote>
+<p>ou</p>
+<blockquote>
+<div><p>(polymère) + Anion<span class="math notranslate nohighlight">\(^{\circ-}\)</span>, Métal<span class="math notranslate nohighlight">\(^+\)</span> <span class="math notranslate nohighlight">\(\rightarrow\)</span> (polymère)<span class="math notranslate nohighlight">\(^{\circ -}\)</span>, Métal<span class="math notranslate nohighlight">\(^+\)</span> + Anion</p>
+</div></blockquote>
+<p>Conductivités élevés dans le polyacétilène (<span class="math notranslate nohighlight">\(2\cdot 10^{4}\)</span> S/cm) mais mauvaise stabilité (oxygène moléculaire) <span class="math notranslate nohighlight">\(\rightarrow\)</span> pas d’applications</p>
+<p><strong>Réduction (dopage p)</strong>
+idem n : dopage par iode moléculaire : le dopant capte un électron des HOMO.</p>
+<blockquote>
+<div><p>PolyAcétylène + 2 I<span class="math notranslate nohighlight">\(_2\)</span> <span class="math notranslate nohighlight">\(\rightarrow\)</span> PAcI<span class="math notranslate nohighlight">\(^{+\circ}\)</span>, I<span class="math notranslate nohighlight">\(_3^-\)</span></p>
+</div></blockquote>
+<p>Les système dopés p sont plus stables <span class="math notranslate nohighlight">\(\rightarrow\)</span> intérêt / applications</p>
+<p>Iode moléculaire se sublime : on lui préfère FeCl<span class="math notranslate nohighlight">\(_3\)</span>, BF<span class="math notranslate nohighlight">\(_3\)</span>, trihydrate de tétrachloroaurate III (HAuCl<span class="math notranslate nohighlight">\(_4\)</span>, 3H<span class="math notranslate nohighlight">\(_2\)</span>O).</p>
+<p>Cas notable : l’acide polystyrène sulfonique (PSSA) joue le double rôle de dopant p et de solubilisante pour les polythiophènes.</p>
+<p><img alt="" src="../_images/pi-bonds.png" /></p>
+<p>Sources : M. Fontanille, Y. Gnanou and J.-L. Six, Chimie et physico-chimie des polymères, Dunod, 2014</p>
+</div>
+</div>
+</div>
+<div class="section" id="conductor-filled-insulating-polymers">
+<h2>Conductor filled insulating polymers<a class="headerlink" href="#conductor-filled-insulating-polymers" title="Permalink to this headline">#</a></h2>
+<p>To be completed with more documentation</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="nanostructured-conductive-polymers">
+<h1>Nanostructured conductive polymers<a class="headerlink" href="#nanostructured-conductive-polymers" title="Permalink to this headline">#</a></h1>
+<div class="section" id="barriers-to-applications">
+<h2>Barriers to applications<a class="headerlink" href="#barriers-to-applications" title="Permalink to this headline">#</a></h2>
+<p>Experimental and theoretical thermodynamical evidence suggests that conductive polymers may even be completely and principally insoluble so that they can only be processed by dispersion.</p>
+<p><span class="xref myst">Wessling2000, CONDUCTIVE POLYMERS AS ORGANIC NANOMETALS</span></p>
+<p><a class="reference external" href="https://doi.org/10.1021/acsaem.7b00057">Tebyetekerwa2017, Surface Self-Assembly of Functional Electroactive Nanofibers on Textile Yarns as a Facile Approach toward Super Flexible Energy Storage</a></p>
+</div>
+<div class="section" id="omnexus-plastic-elastomers-database">
+<h2>Omnexus : plastic &amp; elastomers database<a class="headerlink" href="#omnexus-plastic-elastomers-database" title="Permalink to this headline">#</a></h2>
+<div class="section" id="polar-plastics-vs-non-polar-plastics">
+<h3>Polar Plastics Vs Non-polar Plastics<a class="headerlink" href="#polar-plastics-vs-non-polar-plastics" title="Permalink to this headline">#</a></h3>
+<p>Dielectric properties of a polymer largely depend upon their structure. The structure determines whether a polymer is polar or non-polar and this in turn decided the electrical properties of the polymer.</p>
+<ul class="simple">
+<li><p>In polar polymers (PMMA, PVC, Nylon, PC etc.), dipoles are created due to imbalance in the distribution of electrons. [Note : imbalance bounds are located along branches so the chain is likely move upon the alignment of transverse dipoles] These dipoles tend to align in the presence of electric field. Hence, this creates dipole polarization of the material making these materials only moderately good as insulators.</p></li>
+<li><p>While non-polar polymers (PTFE, PP, PE, PS) have symmetrical molecules and are truly covalent. There are no polar dipoles present in them and hence in presence of electric field does not align the dipoles. However, slight electron polarization occurs due to the movement of electrons in the direction of electric field, which is effectively instantaneous. These polymers have high resistivities and low dielectric constant.</p></li>
+</ul>
+<p>Polar plastics have a tendency to absorb moisture from the atmosphere. Presence of moisture raises the dielectric constant and lowers the resistivity. With rise in temperature, there is faster movement of polymer chains and fast alignment of dipoles. This invariably raises the dielectric constant values for polar plastics.</p>
+<p>Non-polar plastics are not affected by moisture and rise in temperature.</p>
+<p><a class="reference external" href="https://omnexus.specialchem.com/polymer-properties/properties/dielectric-constant">source</a></p>
+</div>
+</div>
+<div class="section" id="heritier-s-book">
+<h2>Héritier’s book<a class="headerlink" href="#heritier-s-book" title="Permalink to this headline">#</a></h2>
+<p>Cite la résolution du problème de physique-stat de la loi d’échelle que suit le volume exclu dans les chaines de longueur <span class="math notranslate nohighlight">\(N\)</span> : renormalisation.</p>
+</div>
+<div class="section" id="lectures-rapides-a-la-bibli">
+<h2>Lectures rapides à la bibli…<a class="headerlink" href="#lectures-rapides-a-la-bibli" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>**taux de cristallinité **: combinaison de masse volumique mesurée finement dans colonnes de fluide à gradient de densité (-&gt; problème sur les densités…)</p></li>
+<li><p><strong>morphologie par bi-refringence</strong>  : pas de transmission si isotrope, mesure de la mise en ordre des chaînes</p></li>
+<li><p><strong>constante diélectrique</strong> : table de valeurs de référence; rôle de l’eau, …</p></li>
+</ul>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="instabilite-de-pieirls-et-dimerisation-par-tigh-binding-model">
+<h1>Instabilité de Pieirls et dimérisation par tigh-binding model ???<a class="headerlink" href="#instabilite-de-pieirls-et-dimerisation-par-tigh-binding-model" title="Permalink to this headline">#</a></h1>
+<p>Cazaux IV-13 (p233) et V-4 (p340) + III-3, 5 &amp; - pour les singularités des phonons à s1D</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/H%C3%BCckel_method">A LIRE : Energy level splitting</a></p>
+<div class="section" id="fontaille-gnanou-et-six">
+<h2>Fontaille, Gnanou et Six<a class="headerlink" href="#fontaille-gnanou-et-six" title="Permalink to this headline">#</a></h2>
+<p>…</p>
+</div>
+<div class="section" id="nanoparticules-dispersees-dans-polymeres">
+<h2>Nanoparticules dispersées dans polymères<a class="headerlink" href="#nanoparticules-dispersees-dans-polymeres" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./polymeres_conducteurs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By J. Scola<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
