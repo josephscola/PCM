@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energie de surface de ZnO &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/old/liste/Energie_de_surface/Surface_Energy_of_ZnO.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fold/liste/Energie_de_surface/Surface_Energy_of_ZnO.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/old/liste/Energie_de_surface/Surface_Energy_of_ZnO.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-du-materiaux">
+   Structure du matériaux
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#edifice-cristallin-3d">
+   Edifice cristallin 3D
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplicite-de-la-maille-conventionnelle">
+     Multiplicité de la maille conventionnelle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#densite-electronique-experimentale">
+   Densité électronique expérimentale
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energie-de-fermi">
+     Energie de Fermi
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monocouches-de-surfaces-vues-comme-des-edifice-cristallin-2d">
+   Monocouches de surfaces vues comme des édifice cristallin 2D
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representation-dans-l-espace-direct-des-surfaces-considerees">
+     Représentation dans l’espace direct des surfaces considérées
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Energie de surface de ZnO</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-du-materiaux">
+   Structure du matériaux
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#edifice-cristallin-3d">
+   Edifice cristallin 3D
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplicite-de-la-maille-conventionnelle">
+     Multiplicité de la maille conventionnelle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#densite-electronique-experimentale">
+   Densité électronique expérimentale
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energie-de-fermi">
+     Energie de Fermi
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monocouches-de-surfaces-vues-comme-des-edifice-cristallin-2d">
+   Monocouches de surfaces vues comme des édifice cristallin 2D
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representation-dans-l-espace-direct-des-surfaces-considerees">
+     Représentation dans l’espace direct des surfaces considérées
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="energie-de-surface-de-zno">
+<h1>Energie de surface de ZnO<a class="headerlink" href="#energie-de-surface-de-zno" title="Permalink to this headline">#</a></h1>
+<div class="section" id="structure-du-materiaux">
+<h2>Structure du matériaux<a class="headerlink" href="#structure-du-materiaux" title="Permalink to this headline">#</a></h2>
+<p>Le composé ZnO cristallise dans les conditions de température et de pression ambiantes dans un réseau hexagonal; la maille conventionnelle est donc double, et le motif la maille primitive comporte deux atomes.
+Sa structure, dite “Wurtzite”, est reproduite dans la figure ci-dessous.
+Ses paramètres de mailles sont <span class="math notranslate nohighlight">\(a = b = 3.25\)</span> <span class="math notranslate nohighlight">\(\angstrom\)</span> et <span class="math notranslate nohighlight">\(c = 5.20\)</span> <span class="math notranslate nohighlight">\(\angstrom\)</span>; les angles en présence sont <span class="math notranslate nohighlight">\((\overrightarrow{a},\overrightarrow{b}) = 120\,^\circ\)</span> et <span class="math notranslate nohighlight">\((\overrightarrow{a},\overrightarrow{c}) = (\overrightarrow{b},\overrightarrow{c}) = 90\,^\circ\)</span>.
+On rappelle que le réseau de Bravais hexagonal est simple, il porte un n\oe ud par maille.</p>
+<p><img alt="Wurtzite.png" src="old/liste/Energie_de_surface/attachment:Wurtzite.png" /></p>
+<blockquote>
+<div><p>Représentation schématique de la structure Wurtzite du ZnO (sphères jaunes : Zn, sphères grises : O).
+La maille (primitive) hexagonale est représentée par le contour noir (on remarquera que sa base forme non pas un hexagone mais un losange).
+Les tétraèdres de coordination des deux types de site sont figurés à titre indicatif.</p>
+</div></blockquote>
+</div>
+<div class="section" id="edifice-cristallin-3d">
+<h2>Edifice cristallin 3D<a class="headerlink" href="#edifice-cristallin-3d" title="Permalink to this headline">#</a></h2>
+<div class="section" id="multiplicite-de-la-maille-conventionnelle">
+<h3>Multiplicité de la maille conventionnelle<a class="headerlink" href="#multiplicite-de-la-maille-conventionnelle" title="Permalink to this headline">#</a></h3>
+<p>Montrer que la maille hexagonale du ZnO est double à partir de la masse volumique du ZnO : <span class="math notranslate nohighlight">\(\rho_\mathrm{ZnO} = 5.61\)</span> g/cm<span class="math notranslate nohighlight">\(^{3}\)</span>.
+On utilisera les masses atomiques suivantes exprimées en unité atomique :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m_\mathrm{Zn} = 65.38\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_\mathrm{O} = 16.00\)</span>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#Paramètres numériques du problème</span>
+<span class="n">NA</span> <span class="o">=</span> <span class="mf">6.02e23</span>
+<span class="n">deg2rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
+<span class="n">hbar</span> <span class="o">=</span> <span class="mf">1.05e-34</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">9.1e-31</span>
+<span class="n">ee</span> <span class="o">=</span> <span class="mf">1.6e-19</span>
+
+<span class="c1"># masses atomiques</span>
+<span class="n">m_ZnO</span> <span class="o">=</span> <span class="mf">65.38</span>
+<span class="n">m_O</span> <span class="o">=</span> <span class="mf">16.00</span>
+
+<span class="c1"># masse volumique</span>
+<span class="n">rho_ZnO</span> <span class="o">=</span> <span class="mf">5.61</span> <span class="c1"># g/cm3</span>
+
+<span class="c1"># paramètres de maille</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">3.25e-10</span><span class="p">,</span> <span class="mf">3.25e-10</span><span class="p">,</span> <span class="mf">5.20e-10</span>
+<span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">120</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La masse <span class="math notranslate nohighlight">\(m_\mathrm{Wurtzite}\)</span> d’une maille hexagonale s’exprime :
+$<span class="math notranslate nohighlight">\(
+m_\mathrm{Wurtzite} = \rho_\mathrm{ZnO} V_W,
+\quad V_W = \vec{a} \cdot \vec{b} \wedge \vec{c}
+    = \frac{\sqrt{3}}{2} a^2 c
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho_ZnO_SI</span> <span class="o">=</span> <span class="n">rho_ZnO</span> <span class="o">*</span> <span class="mf">1e3</span>
+<span class="n">Vw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span>
+<span class="n">m_Wurtzite</span> <span class="o">=</span> <span class="n">rho_ZnO_SI</span> <span class="o">*</span> <span class="n">Vw</span>
+<span class="n">m_Wurtzite</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.668477581490462e-25
+</pre></div>
+</div>
+</div>
+</div>
+<p>D’autre part, la masse <span class="math notranslate nohighlight">\(m_\mathbb{1}\)</span> d’une maille primitive s’exprime
+$<span class="math notranslate nohighlight">\(
+m_\mathbb{1} = \frac{M_\mathrm{Zn} + M_\mathrm{O}}{\mathcal{N}_A}.
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m1_g</span> <span class="o">=</span> <span class="p">(</span><span class="n">m_ZnO</span> <span class="o">+</span> <span class="n">m_O</span><span class="p">)</span> <span class="o">/</span> <span class="n">NA</span> <span class="c1"># en g</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">m1_g</span> <span class="o">*</span> <span class="mf">1e-3</span>
+<span class="n">m1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.3518272425249168e-25
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalement, la multiplicité de la maille conventionnellle de ZnO s’exprime :
+$<span class="math notranslate nohighlight">\(
+M = \frac{m_\mathrm{Wurtzite}}{m_\mathbb{1}},
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">m_Wurtzite</span> <span class="o">/</span> <span class="n">m1</span>
+<span class="n">M</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9739782551698923
+</pre></div>
+</div>
+</div>
+</div>
+<p>La maille Wurtzite est double.</p>
+</div>
+</div>
+<div class="section" id="densite-electronique-experimentale">
+<h2>Densité électronique expérimentale<a class="headerlink" href="#densite-electronique-experimentale" title="Permalink to this headline">#</a></h2>
+<p>Soit <span class="math notranslate nohighlight">\(n \approx 10^{19}\)</span> cm<span class="math notranslate nohighlight">\(^{-3}\)</span> l’ordre de grandeur de la densité d’électrons livres mesurée dans un cristal de ZnO.</p>
+<p>Soit <span class="math notranslate nohighlight">\(\nu\)</span> le nombre d’électrons libres par maille primitive, c’est la moitié du nombre d’électrons dans une maille conventionnelle hexagonale :
+$<span class="math notranslate nohighlight">\(
+\nu = n V_W / 2.
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_cm3</span> <span class="o">=</span> <span class="mf">1e19</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">n_cm3</span> <span class="o">*</span> <span class="mf">1e6</span>
+<span class="n">nu</span> <span class="o">=</span> <span class="n">n</span>  <span class="o">*</span> <span class="n">Vw</span> <span class="o">/</span> <span class="n">M</span>
+<span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;nombre d&#39;électrons libres par maille primitive :</span><span class="se">\n</span><span class="s2">nu = </span><span class="si">{</span><span class="n">nu</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nombre d&#39;électrons libres par maille primitive :
+nu = 2.41e-04
+</pre></div>
+</div>
+</div>
+</div>
+<p>La densité d’électrons libres se réécrit :
+$<span class="math notranslate nohighlight">\(
+n = \frac{4\sqrt{3}\nu}{3a^2c}
+\)</span>$</p>
+<div class="section" id="energie-de-fermi">
+<h3>Energie de Fermi<a class="headerlink" href="#energie-de-fermi" title="Permalink to this headline">#</a></h3>
+<p>On considère un cristal cubique d’arête <span class="math notranslate nohighlight">\(L\)</span>.
+Chacun des <span class="math notranslate nohighlight">\(N\)</span> électrons libres du cristal occupent dans l’espace réciproque un volume <span class="math notranslate nohighlight">\(\frac{\pi^3}{2L^3}\)</span> (deux électrons par vecteur d’onde).
+Le volume du 1/8 de sphère de Fermi, correspondant au volume total occupé par les électrons, libres est donc
+$<span class="math notranslate nohighlight">\( 
+\frac{1}{8}\frac{4}{3}\pi k_F^3 = \frac{N}{2L^3}\pi^3 \equiv n\pi^3.
+\)</span><span class="math notranslate nohighlight">\(
+On en déduit que le rayon de la sphère de Fermi s'exprime :
+\)</span><span class="math notranslate nohighlight">\(
+k_F = (3\pi^2 n)^{1/3}.
+\)</span>$</p>
+<p>Par suite, l’énergie de Fermi s’exprime pour l’électron libre :
+$<span class="math notranslate nohighlight">\(
+E_F = \frac{\hbar^2}{2m} (3\pi^2 n)^{2/3}.
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">EF</span> <span class="o">=</span> <span class="n">hbar</span><span class="o">*</span><span class="n">hbar</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">EF_eV</span> <span class="o">=</span> <span class="n">EF</span> <span class="o">/</span> <span class="n">ee</span>
+<span class="n">EF_eV</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.016819040934688674
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comme chaque vecteur occupe un volume <span class="math notranslate nohighlight">\(\frac{\pi^3}{2L^3}\)</span> et peut accueillir 2 électrons, la densité d’états  est :
+$<span class="math notranslate nohighlight">\(
+g(k) = \frac{2}{\pi^3/L^3}.
+\)</span>$</p>
+<p>On en déduit la densité d’états en fonction de l’énergie :
+$<span class="math notranslate nohighlight">\(
+g(E) = \frac{L^3}{\pi^2} \frac{\sqrt{2m^3}}{\hbar^3} \sqrt{E}.
+\)</span>$</p>
+<p>Finalement, l’énergie moyenne des électrons libres est :
+$<span class="math notranslate nohighlight">\(
+\bar{E} \equiv \int_0^{E_F} E \, g(E) \mathrm{d} E = \frac{3}{5}E_F.
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Emoy</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="mi">5</span> <span class="o">*</span> <span class="n">EF</span>
+<span class="n">Emoy_eV</span> <span class="o">=</span> <span class="n">Emoy</span> <span class="o">/</span> <span class="n">ee</span>
+<span class="n">Emoy_eV</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.010091424560813203
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="monocouches-de-surfaces-vues-comme-des-edifice-cristallin-2d">
+<h2>Monocouches de surfaces vues comme des édifice cristallin 2D<a class="headerlink" href="#monocouches-de-surfaces-vues-comme-des-edifice-cristallin-2d" title="Permalink to this headline">#</a></h2>
+<div class="section" id="representation-dans-l-espace-direct-des-surfaces-considerees">
+<h3>Représentation dans l’espace direct des surfaces considérées<a class="headerlink" href="#representation-dans-l-espace-direct-des-surfaces-considerees" title="Permalink to this headline">#</a></h3>
+<p>On considère que le composé cristallise dans le réseau hexagonal idéal.</p>
+<ol class="simple">
+<li><p>Représenter la distribution des n\oe uds du réseau hexagonal suivant les faces (100), (001) et (110) en admettant que le n\oe ud au centre d’une face (100) est en contact avec ses 4 n\oe uds voisins.</p></li>
+<li><p>Annoter dans chaque cas les distances pertinentes en fonction du paramètres de maille <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Identifier dans chaque cas le réseau de Bravais du réseau 2D.</p></li>
+<li><p>Représenter dans chaque les vecteurs de base <span class="math notranslate nohighlight">\(\overrightarrow{a_{2D}}\)</span> et <span class="math notranslate nohighlight">\(\overrightarrow{b_{2D}}\)</span> de la maille élémentaire du réseau 2D.</p></li>
+<li><p>Dessiner dans chaque cas la maille de Wigner-Seitz du réseau <span class="math notranslate nohighlight">\(2D\)</span>.</p></li>
+</ul>
+<ol class="simple">
+<li><p>faces (001)
+<img alt="ZnO_3D_001.png" src="old/liste/Energie_de_surface/attachment:ZnO_3D_001.png" />
+<img alt="ZnO_2D_001.png" src="old/liste/Energie_de_surface/attachment:ZnO_2D_001.png" /></p></li>
+</ol>
+<p>Surface de la zone de Wigner-Seitz :
+$<span class="math notranslate nohighlight">\(
+S_{W-S}^{(001)} \equiv 12 \frac{a^4/4 \tan \theta}{2} 
+= \frac{3}{2}a^2 \tan \theta
+\)</span><span class="math notranslate nohighlight">\(
+avec \)</span>\theta = \pi/6$ le plus petit angle angle entre la direction joignant deux plus proches voisins et celle joignant un noeud et son second plus proche voisin.</p>
+<ol class="simple">
+<li><p>faces (110) :
+<img alt="ZnO_3D_110.png" src="old/liste/Energie_de_surface/attachment:ZnO_3D_110.png" />
+<img alt="ZnO_2D_110.png" src="old/liste/Energie_de_surface/attachment:ZnO_2D_110.png" />
+Surface de la zone de Wigner-Seitz :
+$<span class="math notranslate nohighlight">\(
+S_{W-S}^{(110)} = \sqrt{3}ac
+\)</span>$</p></li>
+</ol>
+<ol class="simple">
+<li><p>faces (100) :
+<img alt="ZnO_3D_100.png" src="old/liste/Energie_de_surface/attachment:ZnO_3D_100.png" />
+<img alt="ZnO_2D_100.png" src="old/liste/Energie_de_surface/attachment:ZnO_2D_100.png" />
+Surface de la zone de Wigner-Seitz :
+$<span class="math notranslate nohighlight">\(
+S_{W-S}^{(100)} = ac
+\)</span>$</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nS_001</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">nu</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">nS_110</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">nu</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">nS_100</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">nu</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;nS_001 = </span><span class="si">{</span><span class="n">nS_001</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nS_001 = 5.27e+15 
+</pre></div>
+</div>
+</div>
+</div>
+<p>En reprenant le raisonnement du cas 3D, on exprime le rayon du disque de Fermi (à 2D) :
+$<span class="math notranslate nohighlight">\(
+k_F^{(2D)} = \sqrt {2\pi n_S}.
+\)</span><span class="math notranslate nohighlight">\(
+On en déduit que l'énergie de Fermi (à 2D) s'exprime :
+\)</span><span class="math notranslate nohighlight">\(
+E_F^{(2D)} = \frac{\hbar^2}{2m} 2\pi n_S.
+\)</span>$</p>
+<p>De même, on montre que la densité d’états superficielle <span class="math notranslate nohighlight">\(g_S\)</span>, c’est-à-dire dans un édifice cristallin à deux dimensions, s’exprime :
+$<span class="math notranslate nohighlight">\(
+g_S (k) = {L^2 k}{\pi}.
+\)</span><span class="math notranslate nohighlight">\(
+On en déduit que la densité d'état à 2D en fonction de l'énergie s'exprime :
+\)</span><span class="math notranslate nohighlight">\(
+g_S(E) = \frac{L^2 m}{\pi \hbar^2}.
+\)</span>$</p>
+<p>Enfin, l’énergie moyenne des électrons dans une monocouche de surface vaut
+$<span class="math notranslate nohighlight">\(
+\bar{E}^{(2D)} \equiv \int_0^{E_F} E\, g_S(E) \mathrm{d}E
+ = \frac{E_F}{2}.
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">EF2D</span> <span class="o">=</span> <span class="n">hbar</span><span class="o">*</span><span class="n">hbar</span><span class="o">/</span> <span class="n">m</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]</span>
+    <span class="n">EF2D</span> <span class="o">=</span> <span class="n">hbar</span><span class="o">*</span><span class="n">hbar</span><span class="o">/</span> <span class="n">m</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span>
+                                  <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./old/liste/Energie_de_surface"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
