@@ -5,7 +5,18 @@ format: jb-book
 root: intro
 chapters:
 - file: electron_libre/electron_onde
-- file: electron_libre/schroedinger
-- file: electron_libre/solution_3D
-- file: electron_libre/population_statistique
+  sections:
+  - file: electron_libre/schroedinger
+  - file: electron_libre/solution_3D
+  - file: electron_libre/population_statistique
+- file: bandes/chapitre2_structure_de_bandes
+  sections:
+  - file: bandes/cristallo
+  - file: bandes/porteurs_libres
+  - file: bandes/dopage  
+- file: lcao/chapitre3_liaisons_fortes
+  sections:
+  - file: lcao/hydrogene
+  - file: lcao/lcao
+  - file: lcao/relation_dispersion
 

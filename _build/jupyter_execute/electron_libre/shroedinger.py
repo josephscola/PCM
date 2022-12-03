@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Mouvement de l'électron libre : équation de Schrödinger
+# # Mouvement de l'électron libre : équation de Schrödinger
 
-# ###  Position du problème stationnaire
+# ##  Position du problème stationnaire
 
 # Dès lors que le système a atteint son régime permanent, _i.e._ après le régime transitoire consécutif à une modification de l'environnement, les ondes électroniques sont les solutions de l'équation de Schrödinger stationnaire.
 # 
@@ -16,7 +16,7 @@
 # - $V(\vec{r})\psi$ :  énergie potentielle de la particule décrite par $\psi$ à la position $\vec{r}$; $V (\vec{r})$ représente le potentiel d'interaction de la particule avec son environnement à la position $\vec{r}$
 # - $\hbar = h/2\pi$
 
-# ### Analogie avec les phénomènes ondulatoires
+# ## Analogie avec les phénomènes ondulatoires
 
 # Le formalisme de l'équation reprend celui des ondes ordinaires.
 # Pour mémoire, le déplacement $u(x)$ au point $x$ d'une corde vibrante homogène est déterminé par l'équation 
@@ -39,7 +39,7 @@
 # \end{align}
 # $$
 
-# ### Eléments de justification
+# ## Eléments de justification
 # Considérons la propagation de l'onde électronique se produit suivant $\vec{k} = k_x\vec{u}_x + k_y\vec{u}_y + k_z\vec{u}_z$ :
 # 
 # Le premier terme de l'équation de Schrödinger s'écrit :

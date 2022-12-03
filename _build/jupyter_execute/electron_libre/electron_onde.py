@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Chapitre 1 : Electrons libres
+# Qu'est-ce que la conduction métallique ?
+
 # ## Décrire le comportement d'un électron comme une onde
 
 # Durant le XIXème siècle se sont accumulées des preuves expérimentales  montrant tantôt le comportement ondulatoire de la lumière, tantôt son comportement corpusculaire.

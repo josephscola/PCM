@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Etats des électrons libres dans un édifice 3D
+# # Etats des électrons libres dans un édifice 3D
 
-# ### Position du problème
+# ##Position du problème
 # Les électrons sont dits libres au sens où ils n'interagissent ni entre eux, ni avec les noyaux du système. 
 # Tout se passe comme si l'édifice qu'ils occupent étaient une enceinte fermée et vide; 
 # Le problème s'écrit alors :
@@ -26,7 +26,7 @@
 # Par sa forme infiniment profonde, ce potentiel est usuellement désigné comme un _puits de potentiel_.
 # Sans erte de généralité, on considérera un édifice parallélépipédique de volume $V = L_x L_y L_z$.
 
-# ### Calcul des solutions
+# ## Calcul des solutions
 # On cherche des solutions de la forme:
 # 
 # $$ \psi (x,y,z) = \psi_x(x) \psi_y(y) \psi_z(z)$$

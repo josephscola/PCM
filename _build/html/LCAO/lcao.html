@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Modèle des liaisons fortes &#8212; Physique et Chimie de la Matière</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-ups-uvsq-15x9cmx72-rvb.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique et Chimie de la Matière</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Physique et Chimie de la Matière (PCM)
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electron_libre/electron_onde.html">
+   Décrire le comportement d’un électron comme une onde
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electron_libre/solution_3D.html">
+   Etats des électrons libres dans un édifice 3D
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electron_libre/population_statistique.html">
+   Densité d’états
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/LCAO/lcao.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLCAO/lcao.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/LCAO/lcao.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limites-forte-et-faible-de-l-interaction-electron-reseau">
+   Limites forte et faible de l’intéraction électron-réseau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combinaisons-d-orbitales-atomiques">
+   Combinaisons d’orbitales atomiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energie-electronique">
+   Energie électronique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#densite-d-etats">
+   Densité d’états
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#description-du-potentiel-du-reseau">
+   Description du potentiel du réseau
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Modèle des liaisons fortes</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limites-forte-et-faible-de-l-interaction-electron-reseau">
+   Limites forte et faible de l’intéraction électron-réseau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combinaisons-d-orbitales-atomiques">
+   Combinaisons d’orbitales atomiques
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energie-electronique">
+   Energie électronique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#densite-d-etats">
+   Densité d’états
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#description-du-potentiel-du-reseau">
+   Description du potentiel du réseau
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="modele-des-liaisons-fortes">
+<h1>Modèle des liaisons fortes<a class="headerlink" href="#modele-des-liaisons-fortes" title="Permalink to this headline">#</a></h1>
+<section id="limites-forte-et-faible-de-l-interaction-electron-reseau">
+<h2>Limites forte et faible de l’intéraction électron-réseau<a class="headerlink" href="#limites-forte-et-faible-de-l-interaction-electron-reseau" title="Permalink to this headline">#</a></h2>
+<p>Dans l’approche de l’électron presque libre, le potentiel est supposé suffisamment faible pour être considéré comme une légère perturbation de l’électron tout à fait libre.
+Les électrons sont d’autant plus libres (relation de dispersion parabolique, <span class="math notranslate nohighlight">\(\mathcal{E} \propto k^2\)</span>) que la norme de leur vecteur d’onde est petite par rapport à la première zone de Brillouin (<span class="math notranslate nohighlight">\(\Vert \vec{k} \Vert \ll \frac{\pi}{a}\)</span>).
+Autrement dit, l’influence du réseau sur les électrons est d’autant plus faible que leur longueur d’onde est grande devant le pas du réseau (<span class="math notranslate nohighlight">\(\lambda \gg a\)</span>).</p>
+<p>Au contraire, l’approche des liaisons fortes (<em>tight binding model</em>) postule que le potentiel atomique est la contribution principale de l’énergie des électrons.
+On suppose que les électrons sont aussi fortement liés à leur atome que si chaque atome du cristal était isolé;  ce sont les interactions avec les atomes voisins qui sont considérés comme des perturbations subies par les électrons dans leurs orbitales atomiques.
+Cette approche est valide lorsque le paramètre de maille <span class="math notranslate nohighlight">\(a\)</span> s’étend : les conditions pour que les électrons soient libres sont de plus en plus restrictives et le potentiel est de moins en moins négligeable.
+De fait, plus les atomes sont éloignés les uns des autres, plus il est réaliste de les considérer comme des atomes isolés; il suffit d’imaginer un cristal dont le paramètre de maille est de l’ordre du kilomètre !</p>
+</section>
+<section id="combinaisons-d-orbitales-atomiques">
+<h2>Combinaisons d’orbitales atomiques<a class="headerlink" href="#combinaisons-d-orbitales-atomiques" title="Permalink to this headline">#</a></h2>
+<p>La résolution de l’équation de Schrödinger pour l’atome d’hydrogène isolé fournit les expressions analytiques des orbitales atomiques <span class="math notranslate nohighlight">\(\Psi_{n, \ell}\)</span> en fonction de leurs nombres quantiques <span class="math notranslate nohighlight">\(n\)</span> et <span class="math notranslate nohighlight">\(\ell\)</span>:</p>
+<p><img alt="Hydrogen_orbitals" src="../_images/Atomic_orbitals_n123_m-eigenstates.png" /></p>
+<p>By Geek3 - Own work, Created with hydrogen 1.1, CC BY-SA 4.0, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=67681892">https://commons.wikimedia.org/w/index.php?curid=67681892</a></p>
+<p>La complexité du problème croît tellement vite que les expressions analytiques des orbitales de l’atome isolé d’hélium ne sont pas accessibles.
+En pratique, les orbitales de l’atome d’hydrogène s’avèrent des approximations pertinentes des états électroniques pour la plupart des espèces chimiques.
+En contrepartie, des règles empiriques doivent être employée pour compenser l’absence de solutions analytique.
+Par exemple, on adjoint le principe d’Aufbau et la règle de Madelung pour déterminer le remplissage des couches atomiques (1s, 2s, 2p, 3s, 3p, 4s, 3d, <em>etc.</em>).</p>
+<p>Ainsi, parmi toutes les solutions de l’équation de Schroëdinger intégrant le potentiel <span class="math notranslate nohighlight">\(V\)</span> du réseau, on recherche celles qui vérifient des critères issus de l’observation et des hypothèses du modèle.</p>
+<ol class="simple">
+<li><p><strong>électrons fortment liés</strong> : comme on considère que les électrons sont fortement liés à leur atome, leurs états accessibles sont les orbitales atomiques de chaque atome de l’édifice cristallin, dont l’amplitude (densité de probabilité de présence électroniques) est concentré au voisinage du noyau et décroît rapidement avec la distance. Leurs fonctions d’onde sont des superposition, c’est-à-dire des combinaisons linéaires, d’orbitales atomiques issus des atomes du cristal.</p></li>
+<li><p><strong>comportement ondulatoire</strong> : les fonctions d’onde doivent présenter un comportement ondulatoire afin de rendre compte de l’éventuelle propagation des ondes électroniques, lorsque les conditions le permettent.</p></li>
+<li><p><strong>périodicité du résseau</strong> : les fonctions d’onde des électrons mobiles doivent avoir la périodicité du réseau. L’invariance des états par translation selon un vecteur du réseau s’écrit <span class="math notranslate nohighlight">\(\psi (x + ma) = \psi (x), \quad \forall m \in \mathbb{Z} \)</span>.</p></li>
+</ol>
+<p>Prises ensemble, les deux premières conditions conduisent à rechercher des superpositions d’états orbitaux pour chacun des <span class="math notranslate nohighlight">\(N\)</span> sites atomiques de la forme :</p>
+<div class="math notranslate nohighlight">
+\[
+\psi_m (x) = e^{ikx} \Psi_{n, \ell} (x - ma), \quad m,p \in \mathbb{Z}
+\]</div>
+<p>où le vecteur d’onde est imposé par les conditions limites : <span class="math notranslate nohighlight">\(k = p\frac{2\pi}{Na}, p \in \mathbb{Z}\)</span>.</p>
+<p>Finalement, compte tenu de la périodicité des fonctions d’onde héritée du réseau atomique, la superposition d’états s’écrit :
+$<span class="math notranslate nohighlight">\(
+\psi_m (x) = e^{ikma} \psi_0 (x+ma)
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[
+\psi (x) \equiv \sum_{m=1}^{N} \psi_m = \sum_{m=1}^{N} e^{ikma} \psi_0 (x+ma),\quad m \in \mathbb{Z}
+\]</div>
+<p>En tenant compte de la périodicité des fonctions d’onde, ces états s’écrivent à partir de l’orbitale de l’atome origine :</p>
+</section>
+<section id="energie-electronique">
+<h2>Energie électronique<a class="headerlink" href="#energie-electronique" title="Permalink to this headline">#</a></h2>
+<p>Dans ces conditions, le potentiel <span class="math notranslate nohighlight">\(V\)</span> du réseau s’exprime comme la répétition, sur chaque site <span class="math notranslate nohighlight">\(\vec{T}\)</span> du réseau, du potentiel électrostatique créé par les noyaux vus comme des charges ponctuelles <span class="math notranslate nohighlight">\(q\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+V (\vec{r}) = \sum_{\vec{T}} \frac{q}{4\pi\varepsilon_0 \Vert \vec{r} - \vec{T} \Vert}
+\]</div>
+<p>Soit pour une rangée d’atomes :</p>
+<div class="math notranslate nohighlight">
+\[
+V (x) = \sum_{m} \frac{q}{4\pi\varepsilon_0 | x + ma |}
+\]</div>
+<p>Vu comme un corpuscule, l’énergie d’un électron situé en <span class="math notranslate nohighlight">\(x\)</span> plongé dans un potentiel <span class="math notranslate nohighlight">\(V\)</span> vaut <span class="math notranslate nohighlight">\(-eV(x)\)</span>.
+Dans sa version ondulatoire <span class="math notranslate nohighlight">\(\psi(x)\)</span>, l’énergie de l’électron doit intégrer l’ensemble de l’espace où l’électron se trouve “dilué” :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{E}  = -\int \psi^* V \psi \mathrm{d}x 
+ = -\int \sum_{m, m^\prime} \psi^*_0(x + ma) V \psi_{0}(x + m^\prime a) \mathrm{d}x
+\]</div>
+<p>Or, les fonctions <span class="math notranslate nohighlight">\(\psi_m\)</span> décroissent très vite et seuls les deux termes de la double somme vérifiant <span class="math notranslate nohighlight">\(|m-m^\prime| \le 1\)</span> ne s’annulent pas :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+-\mathcal{E}_0  &amp;= -\int \psi_0^*(x) V\psi_{0}(x) \mathrm{d}x, \\
+t^+  &amp;= -\int e^{ika} \psi_0^*(x + a) V\psi_{0}(x) \mathrm{d}x = -e^{ika} t,\\
+t^-  &amp;= -\int e^{-ika} \psi_0^*(x - a) V\psi_{0}(x) \mathrm{d}x = -e^{-ika} t
+\end{align}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Le terme <span class="math notranslate nohighlight">\(U_0\)</span> représente l’énergie de l’électron sur son site : c’est le gain d’énergie à être sur son atome plutôt qu’ailleurs.</p></li>
+<li><p>Le terme <span class="math notranslate nohighlight">\(t\)</span> représente l’énergie de transfert : c’est le gain d’énergie associé à la délocalisation (partielle) sur les sites voisins de droite (+) et de gauche (-). C’est une mesure du recouvrement des orbitales voisines.</p></li>
+</ul>
+<p>Les termes de transfert électronique sont responsables de la perturbation subies par les orbitales atomiques pures induites par la présence du réseau; en l’occurrence l’influence du réseau se limite aux plus proches voisins.</p>
+<p>Finalement, l’énergie d’un électron s’exprime donc :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{E} = -\mathcal{E}_0  - t e^{ika}  - t e^{-ika} = \mathcal{E}_0 - 2t \cos (ka)
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span> <span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">E</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span> <span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span> <span class="p">()</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span> <span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">],</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;-$\dfrac{\pi}</span><span class="si">{a}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\dfrac{\pi}</span><span class="si">{a}</span><span class="s1">$&#39;</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],[</span><span class="sa">r</span><span class="s1">&#39;$E_0 - 2t$&#39;</span><span class="p">,</span> <span class="s1">&#39;$E_0$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$E_0 + 2t$&#39;</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span> <span class="p">(</span><span class="s1">&#39;./figures/lcao_dispersion.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="" src="../_images/lcao_dispersion.png" /></p>
+<p><img alt="" src="../_images/C_hybridation.png" /></p>
+<p><img alt="" src="../_images/pi-bonds.png" /></p>
+</section>
+<section id="densite-d-etats">
+<h2>Densité d’états<a class="headerlink" href="#densite-d-etats" title="Permalink to this headline">#</a></h2>
+<p>A partir de la relation de dispersion, peuvent être dérivés la densité d’états et la masse effective.</p>
+<div class="math notranslate nohighlight">
+\[
+g(\mathcal{E}) = \frac{ N}{\pi t} \left[ 1 - \left(\frac{\mathcal{E} - \mathcal{E}_0}{2t} \right)^2 \right]^{-1/2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+m^* = \frac{-\hbar^2}{a^2} \frac{1}{\mathcal{E} - \mathcal{E}_0}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span> <span class="p">()</span>
+
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">gE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">E</span><span class="o">/</span><span class="mf">0.2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">gE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_6163/4093420301.py:4: RuntimeWarning: invalid value encountered in power
+  gE = (1 - (E/0.2)**2) ** (-0.5)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f4ccb63bbe0&gt;]
+</pre></div>
+</div>
+<img alt="../_images/lcao_14_2.png" src="../_images/lcao_14_2.png" />
+</div>
+</div>
+</section>
+<section id="description-du-potentiel-du-reseau">
+<h2>Description du potentiel du réseau<a class="headerlink" href="#description-du-potentiel-du-reseau" title="Permalink to this headline">#</a></h2>
+<p>La fonction <span class="math notranslate nohighlight">\(V (\vec{r})\)</span> possède par construction la périodicité du réseau.
+Elle peut donc s’exprimer comme la superposition de fonctions périodiques dans chaque direction (<span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(z\)</span>) de l’espace :</p>
+<div class="math notranslate nohighlight">
+\[
+V (x) = \sum_{n\ge 1} g_n \cos \left( n\frac{2\pi}{a}x \right).
+\]</div>
+<p>En effet, en première approximation, le potentiel périodique considéré comme une oscillation sinusoïdale de période <span class="math notranslate nohighlight">\(a\)</span>.
+Les termes d’ordre supérieurs (<span class="math notranslate nohighlight">\(n\ge 2\)</span>) sont périodique de période <span class="math notranslate nohighlight">\(a/n\)</span>, ce qui conserve la périodicité de période <span class="math notranslate nohighlight">\(a\)</span>.
+Ces termes apportent des corrections de plus en plus fines à cette approximation jusqu’à faire tendre la série vers la fonction originale, éventuellement à la limite <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span> (c’est la <em>décomposition en série de Fourier</em>).</p>
+<p>Dans sa version complexe (décomposition en ondes planes), cette série prend la forme suivante :</p>
+<div class="math notranslate nohighlight">
+\[
+V (x) = \sum_{n\in \mathbb{Z}} G_n e^ { in\frac{2\pi}{a}x }.
+\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./LCAO"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By J. Scola<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

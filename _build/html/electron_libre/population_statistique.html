@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Densité d’états &#8212; Physique et Chimie de la Matière</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -53,6 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chapitre 2 : Structure de bandes" href="../bandes/chapitre2_structure_de_bandes.html" />
     <link rel="prev" title="Etats des électrons libres dans un édifice 3D" href="solution_3D.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -114,20 +116,81 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="electron_onde.html">
-   Décrire le comportement d’un électron comme une onde
+   Chapitre 1 : Electrons libres
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="solution_3D.html">
+     Etats des électrons libres dans un édifice 3D
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Densité d’états
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="solution_3D.html">
-   Etats des électrons libres dans un édifice 3D
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../bandes/chapitre2_structure_de_bandes.html">
+   Chapitre 2 : Structure de bandes
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bandes/cristallo.html">
+     Structure de bandes : du métal à l’isolant
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bandes/porteurs_libres.html">
+     Porteurs libres dans un semiconducteur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bandes/dopage.html">
+     Dopage d’un semiconducteur
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Densité d’états
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lcao/chapitre3_liaisons_fortes.html">
+   Chapitre 3 : Modèle des liaisons fortes
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lcao/hydrogene.html">
+     Orbitales hydrogénoïdes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lcao/lcao.html">
+     Combinaison linéaire d’orbitales atomiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lcao/relation_dispersion.html">
+     Relation de dispersion
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -335,40 +398,33 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Densité d’états
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#densite-g-vec-k">
+   Densité
+   <span class="math notranslate nohighlight">
+    \(g(\vec{k})\)
+   </span>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#densite-g-vec-k">
-     Densité
-     <span class="math notranslate nohighlight">
-      \(g(\vec{k})\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#densite-g-mathcal-e">
-     Densité
-     <span class="math notranslate nohighlight">
-      \(g(\mathcal{E})\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#population-statistique">
-     Population statistique
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#densite-g-mathcal-e">
+   Densité
+   <span class="math notranslate nohighlight">
+    \(g(\mathcal{E})\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#population-statistique">
+   Population statistique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#energie-de-fermi">
    Energie de Fermi
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etats-occupes">
    Etats occupés
   </a>
@@ -392,40 +448,33 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Densité d’états
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#densite-g-vec-k">
+   Densité
+   <span class="math notranslate nohighlight">
+    \(g(\vec{k})\)
+   </span>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#densite-g-vec-k">
-     Densité
-     <span class="math notranslate nohighlight">
-      \(g(\vec{k})\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#densite-g-mathcal-e">
-     Densité
-     <span class="math notranslate nohighlight">
-      \(g(\mathcal{E})\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#population-statistique">
-     Population statistique
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#densite-g-mathcal-e">
+   Densité
+   <span class="math notranslate nohighlight">
+    \(g(\mathcal{E})\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#population-statistique">
+   Population statistique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#energie-de-fermi">
    Energie de Fermi
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etats-occupes">
    Etats occupés
   </a>
@@ -440,9 +489,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="section" id="densite-d-etats">
+  <section class="tex2jax_ignore mathjax_ignore" id="densite-d-etats">
 <h1>Densité d’états<a class="headerlink" href="#densite-d-etats" title="Permalink to this headline">#</a></h1>
-<div class="section" id="densite-g-vec-k">
+<section id="densite-g-vec-k">
 <h2>Densité <span class="math notranslate nohighlight">\(g(\vec{k})\)</span><a class="headerlink" href="#densite-g-vec-k" title="Permalink to this headline">#</a></h2>
 <p>Les points de l’espace des <span class="math notranslate nohighlight">\(\vec{k}\)</span> vers lesquels pointent les vecteurs d’onde des solutions de l’équation de Schrödinger sont distants les uns les autres de <span class="math notranslate nohighlight">\(\pi/L_\alpha,\quad \alpha = x,y,z\)</span> suivant les trois directions de l’espace.
 Le volume de l’espace des <span class="math notranslate nohighlight">\(\vec{k}\)</span> qu’occupe un vecteur d’onde est donc <span class="math notranslate nohighlight">\(\frac{\pi^3}{V}\)</span> (<span class="math notranslate nohighlight">\(V = L_xL_yL_z\)</span>, volume de l’édifice).
@@ -451,8 +500,8 @@ Chaque vecteur d’onde permis peut être occupé au maximum par deux états él
 \[
 g(\vec{k}) = \frac{2}{\pi^D/V}.
 \]</div>
-</div>
-<div class="section" id="densite-g-mathcal-e">
+</section>
+<section id="densite-g-mathcal-e">
 <h2>Densité <span class="math notranslate nohighlight">\(g(\mathcal{E})\)</span><a class="headerlink" href="#densite-g-mathcal-e" title="Permalink to this headline">#</a></h2>
 <p>Il est commode de décrire les électrons par leur énergie de sorte qu’on définit également la <strong>densité d’états</strong> en fonction de l’énergie.</p>
 <p>Dans un édifice à 3D, on l’exprime en exprimant le nombre d’états d’énergie comprise entre <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> et <span class="math notranslate nohighlight">\(\mathcal{E}+\mathrm{d}\mathcal{E}\)</span> comme le nombre d’états dans le 1/8<span class="math notranslate nohighlight">\(^\mathrm{ème}\)</span> de coquille sphérique de rayons intérieur et extérieur <span class="math notranslate nohighlight">\(k\)</span> et <span class="math notranslate nohighlight">\(k+\mathrm{d}k\)</span>,</p>
@@ -479,8 +528,8 @@ g(\mathcal{E}) \frac{\hbar^2}{m}k\mathrm{d}k &amp;= \frac{2}{\pi^3V} \frac{1}{2}
                                              &amp;= \frac{m}{\hbar^2}\frac{(2m/\hbar^2\mathcal{E})^{1/2}}{\pi^2V}
 \end{align}
 \end{split}\]</div>
-</div>
-<div class="section" id="population-statistique">
+</section>
+<section id="population-statistique">
 <h2>Population statistique<a class="headerlink" href="#population-statistique" title="Permalink to this headline">#</a></h2>
 <p>Dans tout système thermondnamique, on attribue à chaque état (<em>i.e.</em> chaque valeur énergie) une probabilité d’occurrence.
 Cette probabilité est définie comme le rapport entre le <em>nombre de configurations prises par les <span class="math notranslate nohighlight">\(N\)</span> particules du système dont l’énergie est <span class="math notranslate nohighlight">\(\mathcal{E}\)</span></em> sur le <em>nombre total de configurations</em>.
@@ -529,7 +578,7 @@ f_\mathrm{FD} (\mathcal{E}) = \frac {1}{1 + e^{(\mathcal{E}-\mathcal{E}_F)/k_BT}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_52887/606536689.py:8: RuntimeWarning: overflow encountered in exp
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_9425/606536689.py:8: RuntimeWarning: overflow encountered in exp
   return 1 / (1 + np.exp ((E-1)/kBT))
 </pre></div>
 </div>
@@ -540,10 +589,9 @@ f_\mathrm{FD} (\mathcal{E}) = \frac {1}{1 + e^{(\mathcal{E}-\mathcal{E}_F)/k_BT}
 A mesure que la température augmente, la fonction s’adoucit : sur l’intervalle de largeur <span class="math notranslate nohighlight">\(4k_BT\)</span> centré sur <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span>, le taux d’occupation varie de 90 % à 10 %.
 La fonction est donc d’autant plus étalée que la température est élevée.</p>
 <p>La statistique de Fermi-Dirac indique que les états de plus basse énergie étant thermodynamiquement les plus stables, ils sont peuplés en priorité.</p>
-</div>
-</div>
-<div class="section" id="energie-de-fermi">
-<h1>Energie de Fermi<a class="headerlink" href="#energie-de-fermi" title="Permalink to this headline">#</a></h1>
+</section>
+<section id="energie-de-fermi">
+<h2>Energie de Fermi<a class="headerlink" href="#energie-de-fermi" title="Permalink to this headline">#</a></h2>
 <p>L’énergie des électrons de plus haute énergie de l’assemblée détermine le <em>potentiel chimique</em> <span class="math notranslate nohighlight">\(\mu\)</span> du système.
 Cette grandeur est voisine de l’énergie de Fermi <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span> qui est l’énergie caractéristique (indépendante de la température) du taux d’occupation.
 Le potentiel chimique coïncide avec l’énergie de Fermi à température nulle:</p>
@@ -576,9 +624,9 @@ N &amp;= \int_0^\infty g(\mathcal{E}) f_\mathrm{FD} (\mathcal{E}) \mathrm{d}\mat
 \[
 k_F = (3\pi^2 n)^{1/3}.
 \]</div>
-</div>
-<div class="section" id="etats-occupes">
-<h1>Etats occupés<a class="headerlink" href="#etats-occupes" title="Permalink to this headline">#</a></h1>
+</section>
+<section id="etats-occupes">
+<h2>Etats occupés<a class="headerlink" href="#etats-occupes" title="Permalink to this headline">#</a></h2>
 <p>La statistique de Fermi-Dirac indique qu’à température nulle, les états occupés sont ceux de plus faibles énergies, soit les états dont l’énergie appartient à l’intervalle <span class="math notranslate nohighlight">\([0;\mathrm{E}_F]\)</span>.
 L’<em>étalement</em> de la distribution de probabilité induit part l’agitation thermique conduit à ce que des états occupés soient libérés par des électrons excités dans des états d’énergie supérieur à <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span>.</p>
 <div class="cell docutils container">
@@ -622,7 +670,8 @@ L’<em>étalement</em> de la distribution de probabilité induit part l’agita
 <img alt="../_images/population_statistique_12_0.png" src="../_images/population_statistique_12_0.png" />
 </div>
 </div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -657,6 +706,13 @@ L’<em>étalement</em> de la distribution de probabilité induit part l’agita
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Etats des électrons libres dans un édifice 3D</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../bandes/chapitre2_structure_de_bandes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapitre 2 : Structure de bandes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

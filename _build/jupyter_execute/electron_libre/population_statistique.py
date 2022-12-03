@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Densité d'états
+# # Densité d'états
 
-# ### Densité $g(\vec{k})$
+# ## Densité $g(\vec{k})$
 # Les points de l'espace des $\vec{k}$ vers lesquels pointent les vecteurs d'onde des solutions de l'équation de Schrödinger sont distants les uns les autres de $\pi/L_\alpha,\quad \alpha = x,y,z$ suivant les trois directions de l'espace.
 # Le volume de l'espace des $\vec{k}$ qu'occupe un vecteur d'onde est donc $\frac{\pi^3}{V}$ ($V = L_xL_yL_z$, volume de l'édifice).
 # Chaque vecteur d'onde permis peut être occupé au maximum par deux états électroniques de spins opposé($\uparrow\downarrow$) et la densité d'état s'exprime dans un édifice de _volume_ $V$ dans un espace de dimensions $D$ :
@@ -12,7 +12,7 @@
 # g(\vec{k}) = \frac{2}{\pi^D/V}.
 # $$
 
-# ### Densité $g(\mathcal{E})$
+# ## Densité $g(\mathcal{E})$
 # Il est commode de décrire les électrons par leur énergie de sorte qu'on définit également la **densité d'états** en fonction de l'énergie.
 # 
 # Dans un édifice à 3D, on l'exprime en exprimant le nombre d'états d'énergie comprise entre $\mathcal{E}$ et $\mathcal{E}+\mathrm{d}\mathcal{E}$ comme le nombre d'états dans le 1/8$^\mathrm{ème}$ de coquille sphérique de rayons intérieur et extérieur $k$ et $k+\mathrm{d}k$, 
@@ -45,7 +45,7 @@
 # $$
 # 
 
-# ### Population statistique
+# ## Population statistique
 
 # Dans tout système thermondnamique, on attribue à chaque état (_i.e._ chaque valeur énergie) une probabilité d'occurrence.
 # Cette probabilité est définie comme le rapport entre le _nombre de configurations prises par les $N$ particules du système dont l'énergie est $\mathcal{E}$_ sur le _nombre total de configurations_.

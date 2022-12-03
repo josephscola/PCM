@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Modèle des liaisons fortes &#8212; Physique et Chimie de la Matière</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-ups-uvsq-15x9cmx72-rvb.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique et Chimie de la Matière</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Physique et Chimie de la Matière (PCM)
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../electron_libre/electron_onde.html">
+   Chapitre 1 : Electrons libres
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electron_libre/solution_3D.html">
+     Etats des électrons libres dans un édifice 3D
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electron_libre/population_statistique.html">
+     Densité d’états
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../bandes/chapitre2_structure_de_bandes.html">
+   Chapitre 2 : Structure de bandes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bandes/cristallo.html">
+     Structure de bandes : du métal à l’isolant
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bandes/porteurs_libres.html">
+     Porteurs libres dans un semiconducteur
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bandes/dopage.html">
+     Dopage d’un semiconducteur
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/LCAO/221201_lcao-Copy1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLCAO/221201_lcao-Copy1.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/LCAO/221201_lcao-Copy1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limites-forte-et-faible-de-l-interaction-electron-reseau">
+   Limites forte et faible de l’intéraction électron-réseau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#description-du-potentiel-du-reseau">
+   Description du potentiel du réseau
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Modèle des liaisons fortes</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limites-forte-et-faible-de-l-interaction-electron-reseau">
+   Limites forte et faible de l’intéraction électron-réseau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#description-du-potentiel-du-reseau">
+   Description du potentiel du réseau
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="modele-des-liaisons-fortes">
+<h1>Modèle des liaisons fortes<a class="headerlink" href="#modele-des-liaisons-fortes" title="Permalink to this headline">#</a></h1>
+<section id="limites-forte-et-faible-de-l-interaction-electron-reseau">
+<h2>Limites forte et faible de l’intéraction électron-réseau<a class="headerlink" href="#limites-forte-et-faible-de-l-interaction-electron-reseau" title="Permalink to this headline">#</a></h2>
+<p>Dans l’approche de l’électron presque libre, le potentiel est supposé suffisamment faible pour être considéré comme une légère perturbation de l’électron tout à fait libre.
+Les électrons sont d’autant plus libres (relation de dispersion parabolique, <span class="math notranslate nohighlight">\(\mathcal{E} \propto k^2\)</span>) que la norme de leur vecteur d’onde est petite par rapport à la première zone de Brillouin (<span class="math notranslate nohighlight">\(\Vert \vec{k} \Vert \ll \frac{\pi}{a}\)</span>).
+Autrement dit, l’influence du réseau sur les électrons est d’autant plus faible que leur longueur d’onde est grande devant le pas du réseau (<span class="math notranslate nohighlight">\(\lambda \gg a\)</span>).</p>
+<p>Au contraire, l’approche des liaisons fortes (<em>tight binding model</em>) postule que le potentiel atomique est la contribution principale de l’énergie des électrons.
+On suppose que les électrons sont aussi fortement liés à leur atome que si chaque atome du cristal était isolé;  ce sont les interactions avec les atomes voisins qui sont considérés comme des perturbations subies par les électrons dans leurs orbitales atomiques.
+Cette approche est valide lorsque le paramètre de maille <span class="math notranslate nohighlight">\(a\)</span> s’étend : les conditions pour que les électrons soient libres sont de plus en plus restrictives et le potentiel est de moins en moins négligeable.
+De fait, plus les atomes sont éloignés les uns des autres, plus il est réaliste de les considérer comme des atomes isolés; il suffit d’imaginer un cristal dont le paramètre de maille est de l’ordre du kilomètre !</p>
+</section>
+<section id="description-du-potentiel-du-reseau">
+<h2>Description du potentiel du réseau<a class="headerlink" href="#description-du-potentiel-du-reseau" title="Permalink to this headline">#</a></h2>
+<p>Dans ces conditions, le potentiel <span class="math notranslate nohighlight">\(V\)</span> du réseau s’exprime comme la répétition, sur chaque site <span class="math notranslate nohighlight">\(\vec{T}\)</span> du réseau, du potentiel électrostatique créé par les noyaux vus comme des charges ponctuelles <span class="math notranslate nohighlight">\(q\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+V (\vec{r}) = \sum_{\vec{T}} \frac{q}{4\pi\varepsilon_0 \Vert \vec{r} - \vec{T} \Vert}
+\]</div>
+<p>La fonction <span class="math notranslate nohighlight">\(V (\vec{r})\)</span> possède par construction la périodicité du réseau.
+Elle peut donc s’exprimer comme la superposition de fonctions périodiques dans chaque direction (<span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(z\)</span>) de l’espace :</p>
+<div class="math notranslate nohighlight">
+\[
+V (x) = \sum_{n\ge 1} g_n \cos \left( n\frac{2\pi}{a}x \right).
+\]</div>
+<p>En effet, en première approximation, le potentiel périodique considéré comme une oscillation sinusoïdale de période <span class="math notranslate nohighlight">\(a\)</span>.
+Les termes d’ordre supérieurs (<span class="math notranslate nohighlight">\(n\ge 2\)</span>) sont périodique de période <span class="math notranslate nohighlight">\(a/n\)</span>, ce qui conserve la périodicité de période <span class="math notranslate nohighlight">\(a\)</span>.
+Ces termes apportent des corrections de plus en plus fines à cette approximation jusqu’à faire tendre la série vers la fonction originale, éventuellement à la limite <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span> (c’est la <em>décomposition en série de Fourier</em>).</p>
+<p>Dans sa version complexe (décomposition en ondes planes), cette série prend la forme suivante :</p>
+<div class="math notranslate nohighlight">
+\[
+V (x) = \sum_{n\in \mathbb{Z}} G_n e^ { in\frac{2\pi}{a}x }.
+\]</div>
+<p>Parmi toutes les solutions de l’équation de Schroëdinger intégrant le potentiel <span class="math notranslate nohighlight">\(V\)</span> du réseau, on recherche celles qui :</p>
+<ul class="simple">
+<li><p>ont un comportement ondulatoire décrit par leur vecteur d’onde <span class="math notranslate nohighlight">\(\vec{k}\)</span></p></li>
+<li><p>sont susceptibles de s’éteindre avec la distance à un atome (celui dont l’électron est issu)</p></li>
+<li><p>possèdent la périodicité du réseau</p></li>
+</ul>
+<p>La combinaison de ces 3 critères conduit à rechercher des fonctions d’onde de la forme :
+<span class="math notranslate nohighlight">\(\psi (\vec{r}) = e^{i\vec{k}\cdot \vec{x}} \phi (\vec{r})\)</span> où <span class="math notranslate nohighlight">\(\phi\)</span> est une fonction qui tend vers zéro à l’infini.</p>
+<div class="math notranslate nohighlight">
+\[
+\psi (\vec{r} + \vec{T}) = \psi (\vec{r})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\psi_\vec{k} (\vec{r} + \vec{T}) = e^{i\vec{k}\cdot \vec{T}} \psi_\vec{k} (\vec{r})
+\]</div>
+<p>Etats électroniques</p>
+<div class="math notranslate nohighlight">
+\[
+\psi (\vec{r}) = \sum_{\vec{T}} a_{\vec{k},\vec{T}} \phi_j (\vec{r} + \vec{T})
+\]</div>
+<p>où <span class="math notranslate nohighlight">\(\phi_j\)</span> est une orbitale atomique.</p>
+<p>Intégrales de transfert</p>
+<p><img alt="Hydrogen_orbitals" src="LCAO/Atomic_orbitals_n123_m-eigenstates.png" /></p>
+<p>By Geek3 - Own work, Created with hydrogen 1.1, CC BY-SA 4.0, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=67681892">https://commons.wikimedia.org/w/index.php?curid=67681892</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./LCAO"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By J. Scola<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
