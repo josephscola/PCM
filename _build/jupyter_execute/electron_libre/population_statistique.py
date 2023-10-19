@@ -174,7 +174,7 @@ ax.set_ylabel ("densité d'états")
 ax2 = ax.twinx ()
 ax2.plot (E, f_FD (E, kBT), color = 'C0', ls = 'dashed', alpha = 0.8)
 ax2.set_ylabel ("taux d'occupation $f_\mathrm{FD}$")
-ax.annotate('', xy=(0.98*axxlim[1], 0.2), xytext=(0.8*axxlim[1], 0.2),
+ax.annotate(text='', xy=(0.98*axxlim[1], 0.2), xytext=(0.8*axxlim[1], 0.2),
             arrowprops=dict(arrowstyle = '->',color='C0', alpha = 0.8))
 ax.set_xlabel (r'$\mathcal{E}/\mathcal{E}_F$')
 ax.set_title ('Etats occupés par des électrons libres dans un édifice 3D')
