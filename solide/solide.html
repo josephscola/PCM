@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Décrire l’état d’un solide &#8212; Physique et Chimie de la Matière</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solide/solide';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Modèle de l’électrons libres dans un édifice 3D" href="../electron_libre/electron_libre.html" />
+    <link rel="prev" title="Physique et Chimie de la Matière (PCM)" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo-ups-uvsq-15x9cmx72-rvb.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-ups-uvsq-15x9cmx72-rvb.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Physique et Chimie de la Matière (PCM)
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Décrire l’état d’un solide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../electron_libre/electron_libre.html">Modèle de l’électrons libres dans un édifice 3D</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../electron_libre/electron_onde.html">Décrire le comportement d’un électron comme une onde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../electron_libre/schroedinger.html">Mouvement de l’électron libre : équation de Schrödinger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../electron_libre/solution_3D.html">Etats des électrons libres dans un édifice 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../electron_libre/population_statistique.html">Densité d’états</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../bandes/chapitre2_structure_de_bandes.html">Structure de bandes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bandes/md/cristallo.html">Structure de bandes : du métal à l’isolant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bandes/md/porteurs_libres.html">Porteurs libres dans un semiconducteur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bandes/md/dopage.html">Dopage d’un semiconducteur</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lcao/chapitre3_liaisons_fortes.html">Chapitre 3 : Modèle des liaisons fortes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lcao/md/hydrogene.html">Orbitales hydrogénoïdes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lcao/md/lcao.html">Combinaison linéaire d’orbitales atomiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lcao/md/relation_dispersion.html">Relation de dispersion</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsolide/solide.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/solide/solide.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Décrire l’état d’un solide</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#position-du-probleme">Position du problème</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probleme-complet">Problème complet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypotheses-simplificatrices">Hypothèses simplificatrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-de-born-oppenheimer">Approximation de Born-Oppenheimer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-du-champ-moyen-hartree-fock">Approximation du champ moyen (Hartree-Fock)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="decrire-l-etat-d-un-solide">
+<h1>Décrire l’état d’un solide<a class="headerlink" href="#decrire-l-etat-d-un-solide" title="Permalink to this heading">#</a></h1>
+<section id="position-du-probleme">
+<h2>Position du problème<a class="headerlink" href="#position-du-probleme" title="Permalink to this heading">#</a></h2>
+<section id="probleme-complet">
+<h3>Problème complet<a class="headerlink" href="#probleme-complet" title="Permalink to this heading">#</a></h3>
+<p>Les propriétés macrosopiques d’un solide ainsi que sa réponse à différentes excitations sont déterminées par l’état de l’ensemble des atomes qui le composent, c’est-à-dire de l’état de ses <span class="math notranslate nohighlight">\(N_{noy}\)</span> noyaux et de ses <span class="math notranslate nohighlight">\(N_{él}\)</span> électrons.</p>
+<p>Les propriétés macroscopiques d’un solide incluent :</p>
+<ul class="simple">
+<li><p>sa densité</p></li>
+<li><p>sa chaleur spécifique</p></li>
+</ul>
+<p>Les excitations extérieures susceptibles de modifier l’état d’un solide sont:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>excitation</p></th>
+<th class="head text-center"><p>réponses du solide</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>température</p></td>
+<td class="text-center"><p>changement d’état, phonons,  émission de photons, d’électrons</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>champ électrique</p></td>
+<td class="text-center"><p>conductivité, polarisation électrique, piézoélectricité</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>champ magnétique</p></td>
+<td class="text-center"><p>aimantation, magnétorésistance, magnéto-élasticité</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>contraintes mécaniques</p></td>
+<td class="text-center"><p>déformation, piézoélectricité inverse</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>pression</p></td>
+<td class="text-center"><p>transition de phase</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>irradiation par des photons</p></td>
+<td class="text-center"><p>réflectivité, réfraction, absorption, diffraction, luminescence (fluorescence)</p></td>
+</tr>
+</tbody>
+</table>
+<p>L’état d’un solide est décrit par son <strong>énergie</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{E} = \mathcal{E}_{cin} + \mathcal{E}_{pot}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.constants</span> <span class="k">as</span> <span class="nn">phys</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">phys</span><span class="o">.</span><span class="n">physical_constants</span>
+<span class="n">m0</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;electron mass&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mP</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;proton mass&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ee</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span> <span class="s1">&#39;elementary charge&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;Newtonian constant of gravitation&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">eps0</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;vacuum electric permittivity&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">a0</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;Bohr radius&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{E}_{cin}\)</span> représente l’énergie cinétique de l’ensemble des noyaux et des électrons du solide.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{E}_{pot}\)</span> rassemble les énergies potentielles desquelles dérivent les forces s’exerçant sur les noyaux et les électrons du solide</p></li>
+</ul>
+<p>Examinons la nature de ces forces.
+Noyaux et électrons portent une masse et une charge :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basics</span>  <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;- masse d&#39;un proton : $m_P$  = &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mP</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> kg</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">basics</span> <span class="o">+=</span> <span class="sa">r</span><span class="s2">&quot;- masse d&#39;un électron : $m_0$ = &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">m0</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> kg</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">basics</span> <span class="o">+=</span> <span class="sa">r</span><span class="s2">&quot;- charge électrique élémentaire : $e $ = &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ee</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> C</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">display</span> <span class="p">(</span><span class="n">Markdown</span> <span class="p">(</span><span class="n">basics</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<ul class="simple">
+<li><p>masse d’un proton : $m_P$  = 1.67e-27 kg</p></li>
+<li><p>masse d’un électron : $m_0$ = 9.11e-31 kg</p></li>
+<li><p>charge électrique élémentaire : $e $ = 1.60e-19 C</p></li>
+</ul>
+</div>
+</div>
+<p>Les forces agissant sur les particules constitutives du solide résultent de leurs interaction mutuelles, dont la nature est donc gravitationnelle d’une part et électro-statique d’autre part.</p>
+<p>Deux particules 1 et 2 distante de <span class="math notranslate nohighlight">\(r_{12}\)</span> exercent l’une sur l’autre une attraction gravitationnelle d’intensité :</p>
+<div class="math notranslate nohighlight">
+\[
+F_{G} = -\mathcal{G} \frac{m_1 m_2}{r_{12}^2}
+\]</div>
+<p>et une force d’intéraction électrostatique d’intensité :</p>
+<div class="math notranslate nohighlight">
+\[
+F_{ES} = \frac{q_1 q_2}{4 \pi \epsilon_0 r_{12}^{2}}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FES</span> <span class="o">=</span> <span class="n">ee</span> <span class="o">*</span> <span class="n">ee</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">eps0</span> <span class="o">/</span> <span class="n">a0</span> <span class="o">/</span> <span class="n">a0</span>
+<span class="n">FGr</span> <span class="o">=</span> <span class="n">G</span> <span class="o">*</span> <span class="n">m0</span> <span class="o">*</span> <span class="n">mP</span> <span class="o">/</span> <span class="n">a0</span> <span class="o">/</span> <span class="n">a0</span>
+<span class="n">text2display</span>  <span class="o">=</span> <span class="s2">&quot;L&#39;ordre de grandeur de ces forces peut être obtenu en prenant l&#39;exemple du proton et de l&#39;électron d&#39;un atome d&#39;hydrogène isolé :</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">text2display</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;- Attraction gravitationnelle entre l&#39;électron d&#39;un atome d&#39;hydrogène et son proton : &quot;</span>
+<span class="n">text2display</span> <span class="o">+=</span> <span class="s1">&#39;$F_</span><span class="si">{G}</span><span class="s1">$ = &#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">FGr</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> N</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+<span class="n">text2display</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;- Attraction électrostatique entre l&#39;électron d&#39;un atome d&#39;hydrogène et son proton : &quot;</span>
+<span class="n">text2display</span> <span class="o">+=</span> <span class="s1">&#39;$F_</span><span class="si">{ES}</span><span class="s1">$ = &#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">FES</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> N&quot;</span>
+<span class="n">display</span> <span class="p">(</span><span class="n">Markdown</span> <span class="p">(</span><span class="n">text2display</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>L’ordre de grandeur de ces forces peut être obtenu en prenant l’exemple du proton et de l’électron d’un atome d’hydrogène isolé :</p>
+<ul class="simple">
+<li><p>Attraction gravitationnelle entre l’électron d’un atome d’hydrogène et son proton : $F_{G}$ = 3.63e-47 N</p></li>
+<li><p>Attraction électrostatique entre l’électron d’un atome d’hydrogène et son proton : $F_{ES}$ = 8.24e-08 N</p></li>
+</ul>
+</div>
+</div>
+<p>Trente-neuf ordres de grandeurs séparent l’intensité de ces deux forces; en d’autres termes, la contribution de l’attraction gravitationnelles entre les particules constitutives d’un solide ne serait détectable qu’à la condition de disposer d’instruments de mesures dont la précision fournirait 39 décimales ou plus !</p>
+<p>C’est la raison pour laquelle le terme <span class="math notranslate nohighlight">\(\mathcal{E}_{pot}\)</span> correspond à l’énergie potentielle électro-statique (ou énergie portentielle de Coulomb) :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{E}_{pot} \equiv qV_C (r) = \frac{q}{4\pi \epsilon \Vert \vec{r} \Vert}
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V_C\)</span> potentiel de Coulomb créé par une charge ponctuelle</p></li>
+<li><p><span class="math notranslate nohighlight">\(\epsilon\)</span> : permittivité du milieu considéré</p></li>
+<li><p><span class="math notranslate nohighlight">\(q\)</span> : charge de la particule considérée</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{r}\)</span> : position de la particule considérée par rapport à la charge ponctuelle créant le potentiel</p></li>
+</ul>
+<p>Le solide est entièrement décrit par ses <span class="math notranslate nohighlight">\(N_{noy}\)</span> noyaux situés en <span class="math notranslate nohighlight">\(\vec{R_i}\)</span> et ses <span class="math notranslate nohighlight">\(N_{él}\)</span> électrons situés en <span class="math notranslate nohighlight">\(\vec{r_j}\)</span>.
+L’état du solide est entièrement décrit par le mouvement de ces <span class="math notranslate nohighlight">\(N_{noy} + N_{él}\)</span> particules autour de leur positions d’équilibre (énergie cinétique) et la somme de toutes les interactions électrostatiques (attraction/répulsions coulombienne).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\mathcal{E} &amp;= \mathcal{E_{cin}}^{(noy)} + \mathcal{E_{cin}}^{(él)} + \mathcal{E_{pot}}^{(noy-noy)}
+              + \mathcal{E_{pot}}^{(él-él)} + \mathcal{E_{pot}}^{(él-noy)}\\
+            &amp;= \frac{1}{2} \sum_{i=1}^{N_{noy}} \frac{P_i^2}{M_i}
+              + \frac{1}{2} \sum_{j=1}^{N_{él}} \frac{p_j^2}{m_0}
+              + \frac{Z^2}{2} \sum_{i\neq j}^{N_{noy}} V_C (\vec{R_i} - \vec{R_j})
+              + \frac{1}{2} \sum_{i\neq j}^{N_{él}} V_C (\vec{r_i} - \vec{r_j})
+              - Z \sum_{i=1}^{N_{noy}} \sum_{j=1}^{N_{él}} V_C (\vec{r_j} - \vec{R_i})
+\end{align}
+\end{split}\]</div>
+<p>L’état déquilibre du système est défini par la configuration (position + vitesse de chacune des particules du problème) qui <em>minimise</em> l’énergie totale du système.
+Ce problème n’admet de solutions analytiques que pour l’atome d’hydrogène !</p>
+<p>En l’absence de solution analytique, des solutions numériques sont recherchées, mais le temps de calcul diverge dès que le nombre de particules atteint l’ordre de 10<span class="math notranslate nohighlight">\(^6\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cas du silicium</span>
+<span class="kn">from</span> <span class="nn">mendeleev</span> <span class="kn">import</span> <span class="n">Si</span>
+<span class="c1"># méthode 1 : masse totale rapportée à la masse d&#39;un atome</span>
+<span class="n">mSi</span> <span class="o">=</span> <span class="n">Si</span><span class="o">.</span><span class="n">atomic_weight</span> <span class="o">*</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;atomic mass constant&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="n">Si</span><span class="o">.</span><span class="n">density</span> <span class="o">*</span> <span class="mf">1e3</span>
+<span class="n">l</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="mf">5e-4</span>
+<span class="n">l</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mf">1e-7</span>
+<span class="n">N1</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">l</span> <span class="o">*</span> <span class="n">L</span> <span class="o">*</span> <span class="n">h</span> <span class="o">/</span> <span class="n">mSi</span>
+
+<span class="c1"># méthode 2 : volume total rapporté au volume d&#39;une maille diamant</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;lattice parameter of silicon&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">N2</span> <span class="o">=</span> <span class="n">l</span> <span class="o">*</span> <span class="n">L</span> <span class="o">*</span> <span class="n">h</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="mi">8</span> <span class="c1"># maille CFC à 2 atomes par maille unitaire)</span>
+
+<span class="c1"># complexité</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">N_at</span> <span class="o">=</span> <span class="n">N1</span>
+<span class="n">N_objets</span> <span class="o">=</span> <span class="p">(</span><span class="n">Z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">N_at</span>
+<span class="n">N_operations</span> <span class="o">=</span> <span class="n">N_at</span> <span class="o">+</span> <span class="n">Z</span> <span class="o">*</span> <span class="n">N_at</span> <span class="o">+</span> <span class="n">N_at</span> <span class="o">+</span> <span class="n">Z</span> <span class="o">*</span> <span class="n">N_at</span> <span class="o">+</span> <span class="n">Z</span> <span class="o">*</span> <span class="n">N_at</span> <span class="o">*</span> <span class="n">N_at</span>
+<span class="n">N_objets</span>
+<span class="n">N_operations</span>
+<span class="n">temps_calcul</span> <span class="o">=</span> <span class="n">N_operations</span> <span class="o">/</span> <span class="mf">1e9</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mf">365.25</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span>
+<span class="n">temps_calcul</span> <span class="o">/</span> <span class="n">year</span>
+
+<span class="c1">#report  = r&quot;Pour une plaquette de silicium de $1\times 1$ cm$^2$ et d&#39;un demi millimètre d&#39;épaisseur&quot; + &quot; :\n&quot;</span>
+<span class="n">report</span>  <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Pour une parallélépipède de silicium de </span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s2">.0e</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;$\times$&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">L</span><span class="si">:</span><span class="s2">.0e</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;$\times$&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">h</span><span class="si">:</span><span class="s2">.0e</span><span class="si">}</span><span class="s2"> m$^3$ :</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;- le nombre d&#39;atomes est de l&#39;ordre de </span><span class="si">{</span><span class="n">N_at</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="s2">&quot;- le nombre de particules est $N_</span><span class="si">{part}</span><span class="s2"> = (Z + 1) N = $&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">N_objets</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> nécessitant 6 coordonnées pour chacune</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="s2">&quot;- le nombre d&#39;opérations à réalisé pour connaître l&#39;énergie d&#39;une seule configuration des $N_</span><span class="si">{part}</span><span class="s2">$ est &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">N_operations</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="s2">&quot;- le temps nécessaire pour réaliser ces opérations avec un processeurs à 1 GHz : &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;$T = $</span><span class="si">{</span><span class="n">temps_calcul</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> s&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="sa">r</span><span class="s2">&quot;$\approx$&quot;</span> <span class="o">+</span>  <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">temps_calcul</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">year</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> ans&quot;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">temps_calcul</span> <span class="o">/</span> <span class="n">year</span> <span class="o">/</span> <span class="mf">13.8e9</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="n">report</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;, soit </span><span class="si">{</span><span class="n">temps_calcul</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">13.8e9</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> plus long que l&#39;âge de l&#39;univers observable</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+<span class="k">else</span><span class="p">:</span> <span class="n">report</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+<span class="c1">#report += f&quot;1 an = {year:.2e} s&quot;</span>
+<span class="n">display</span> <span class="p">(</span><span class="n">Markdown</span> <span class="p">(</span><span class="n">report</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pour une parallélépipède de silicium de 1e-07$\times$1e-07$\times$1e-07 m$^3$ :</p>
+<ul class="simple">
+<li><p>le nombre d’atomes est de l’ordre de 5.00e+07</p></li>
+<li><p>le nombre de particules est $N_{part} = (Z + 1) N = $7.49e+08 nécessitant 6 coordonnées pour chacune</p></li>
+<li><p>le nombre d’opérations à réalisé pour connaître l’énergie d’une seule configuration des $N_{part}$ est 3.49e+16</p></li>
+<li><p>le temps nécessaire pour réaliser ces opérations avec un processeurs à 1 GHz : $T = $3.49e+07 s$\approx$1.11e+00 ans</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="hypotheses-simplificatrices">
+<h2>Hypothèses simplificatrices<a class="headerlink" href="#hypotheses-simplificatrices" title="Permalink to this heading">#</a></h2>
+<section id="approximation-de-born-oppenheimer">
+<h3>Approximation de Born-Oppenheimer<a class="headerlink" href="#approximation-de-born-oppenheimer" title="Permalink to this heading">#</a></h3>
+<p>Compte tenu du fait que la masse des noyaux est typiquemenbt 2000 supérieure à celle des électrons, leur inertie conduit à ce que leur énergie cinétique soit relativement faible.
+La première approximation consiste à négliger le mouvement des noyaux et les considérer fixes sur leur position d’équilibre.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ccl}
+\mathcal{E}_{cin}^{(noy)} &amp;\longrightarrow&amp; 0 \\
+\mathcal{E}_{pot}^{(noy-noy)} &amp;\longrightarrow&amp; \mathrm{cst}
+\end{array}
+\end{split}\]</div>
+<p>Aucun de ces deux termes ne participent plus au problème de minimisation de l’énergie totale qui se réduit aux trois termes suivants :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\mathcal{E} &amp;= \mathcal{E_{cin}}^{(él)}
+              + \mathcal{E_{pot}}^{(él-él)} + \mathcal{E_{pot}}^{(él-noy)}\\
+            &amp;= \frac{1}{2} \sum_{j=1}^{N_{él}} \frac{p_j^2}{m_0}
+              + \frac{1}{2} \sum_{i\neq j}^{N_{él}} V_C (\vec{r_i} - \vec{r_j})
+              - Z \sum_{i=1}^{N_{noy}} \sum_{j=1}^{N_{él}} V_C (\vec{r_j} - \vec{R_i})
+\end{align}
+\end{split}\]</div>
+<p>Malgré cette simplification, le problème ne trouve toujours pas de solutions analytiques.
+La difficulté vient du terme <span class="math notranslate nohighlight">\(\mathcal{E}_{pot}^{(él-él)}\)</span> des interactions électro-statiques entre électrons deux à deux;
+ce terme empèche de séparer le problème en autant d’équations (à 1 inconnues) qu’il y a d’inconnues parce que chaque électron dépend de l’état de tous les autres.</p>
+</section>
+<section id="approximation-du-champ-moyen-hartree-fock">
+<h3>Approximation du champ moyen (Hartree-Fock)<a class="headerlink" href="#approximation-du-champ-moyen-hartree-fock" title="Permalink to this heading">#</a></h3>
+<p>L’approche de Hartree (établie en 1926, pendant sa thèse <span class="math notranslate nohighlight">\(\dots\)</span>) consiste à remplacer le potentiel vu par le <span class="math notranslate nohighlight">\(i\)</span>-ème électron <span class="math notranslate nohighlight">\(\sum_{j}^{N_{él}-1} V_C (\vec{r_i} - \vec{r_j})\)</span> par un potentiel moyen, un potentiel commun à tous les électrons et qui traduise l’effet moyen des autres électrons sur le <span class="math notranslate nohighlight">\(i\)</span>-ème.</p>
+<p>Cette approximation réduit à elle seule le nombre d’inconnues à 6, puisque l’environnement est le même pour chaque électron (et que les noyaux sont supposés fixes dans leur position d’équilibre).</p>
+<p>L’erreur commise par le remplacement du potentiel exact par une version simplifiée est d’autant moins pénalisante que les termes d’intéraction électro-statique sont faibles devant le terme d’énergie cinétique.
+Il s’avère que ces conditions sont vérifiées dans certaines classes de matériaux, les métaux et les semiconducteurs, pour lesquels cette approximation est réaliste.</p>
+<p>Le problème de minimisation se réduit alors à  :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{E} = \sum_{j=1}^{N_{él}} \left[ \frac{p_j^2}{2 m_0} + \sum_{i=1}^{N_{noy}} V_{moyen} (\vec{r_j} - \vec{R_i}) \right]
+\]</div>
+<p>En réalité, toute la difficulté de la méthode réside dans le choix du potentiel moyen <span class="math notranslate nohighlight">\(V_{moyen}\)</span>.</p>
+<p>Deux cas limites offrent une vision simple du potentiel moyen :</p>
+<ul class="simple">
+<li><p>lorsque l’énergie cinétique de la population d’électrons est si élevée que tout potentiel d’interaction est négligeable. C’est le <strong>modèle de l’électron libre</strong>.</p></li>
+<li><p>lorsque l’énergie cinétique de la population d’électrons est si faible que les électrons n’ont pas la possibilité de quitter leur atome et occupent des orbitaux comme si les atomes étaient isolés. C’est le <strong>modèle des liaisons fortes</strong>.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./solide"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Physique et Chimie de la Matière (PCM)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../electron_libre/electron_libre.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modèle de l’électrons libres dans un édifice 3D</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#position-du-probleme">Position du problème</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probleme-complet">Problème complet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypotheses-simplificatrices">Hypothèses simplificatrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-de-born-oppenheimer">Approximation de Born-Oppenheimer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-du-champ-moyen-hartree-fock">Approximation du champ moyen (Hartree-Fock)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By J. Scola
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

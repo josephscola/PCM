@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/home/scola/.local/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/scola/.local/lib/python3.10/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/scola/.local/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/scola/.local/lib/python3.10/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/home/scola/.local/lib/python3.10/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/scola/.local/lib/python3.10/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# espace des $k$ à 2 dimensions
+fig, ax = plt.subplots (nrows = 1, ncols = 1, figsize = (5,5))
+
+n, m = 14,14
+col = 'C0'
+
+for y in range (n+1):
+    for x in range (m+1):
+        if x*y == 0:
+            ax.plot (x, y, marker = 'o', color = col, markersize = 8, alpha = 0.02)
+        else:
+            if x*x + y*y > m*n:
+                ax.plot (x, y, marker = 'o', color = col, markersize = 6, alpha = 0.2)
+            else:
+                ax.plot (x, y, marker = 'o', color = col, markersize = 6)
+x = np.linspace (0, m)
+ax.plot (x, np.sqrt (m*m-x*x), color = 'C1', alpha = 0.5)
+ax.set_aspect (1)
+ax.set_xlabel (r'$n_x =  \frac{k_x}{\pi/L_x}$')
+ax.set_ylabel (r'$n_y =  \frac{k_y}{\pi/L_y}$')
+
+ax.annotate (s = '', xy = (7,12), xytext = (0,0),
+            arrowprops = dict (facecolor = 'C1', edgecolor = 'C1', width = 1.2))
+ax.text (7.5,12.2, r'$\Vert\vec{k}\Vert = k_F$', color = 'C1')
+
+ax.set_title ("Etats accessibles aux électrons libres dans l\'espace des $k$ (2D)")
+
+ax.set_xlim (0,m)
+ax.set_ylim (0,n)
+plt.show ()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[2], line 22[0m
+[1;32m     19[0m ax[38;5;241m.[39mset_xlabel ([38;5;124mr[39m[38;5;124m'[39m[38;5;124m$n_x =  [39m[38;5;124m\[39m[38;5;124mfrac[39m[38;5;132;01m{k_x}[39;00m[38;5;124m{[39m[38;5;124m\[39m[38;5;124mpi/L_x}$[39m[38;5;124m'[39m)
+[1;32m     20[0m ax[38;5;241m.[39mset_ylabel ([38;5;124mr[39m[38;5;124m'[39m[38;5;124m$n_y =  [39m[38;5;124m\[39m[38;5;124mfrac[39m[38;5;132;01m{k_y}[39;00m[38;5;124m{[39m[38;5;124m\[39m[38;5;124mpi/L_y}$[39m[38;5;124m'[39m)
+[0;32m---> 22[0m [43max[49m[38;5;241;43m.[39;49m[43mannotate[49m[43m [49m[43m([49m[43ms[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mxy[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[43m([49m[38;5;241;43m7[39;49m[43m,[49m[38;5;241;43m12[39;49m[43m)[49m[43m,[49m[43m [49m[43mxytext[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[43m([49m[38;5;241;43m0[39;49m[43m,[49m[38;5;241;43m0[39;49m[43m)[49m[43m,[49m
+[1;32m     23[0m [43m            [49m[43marrowprops[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[38;5;28;43mdict[39;49m[43m [49m[43m([49m[43mfacecolor[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mC1[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43medgecolor[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mC1[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mwidth[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[38;5;241;43m1.2[39;49m[43m)[49m[43m)[49m
+[1;32m     24[0m ax[38;5;241m.[39mtext ([38;5;241m7.5[39m,[38;5;241m12.2[39m, [38;5;124mr[39m[38;5;124m'[39m[38;5;124m$[39m[38;5;124m\[39m[38;5;124mVert[39m[38;5;124m\[39m[38;5;124mvec[39m[38;5;132;01m{k}[39;00m[38;5;124m\[39m[38;5;124mVert = k_F$[39m[38;5;124m'[39m, color [38;5;241m=[39m [38;5;124m'[39m[38;5;124mC1[39m[38;5;124m'[39m)
+[1;32m     26[0m ax[38;5;241m.[39mset_title ([38;5;124m"[39m[38;5;124mEtats accessibles aux électrons libres dans l[39m[38;5;130;01m\'[39;00m[38;5;124mespace des $k$ (2D)[39m[38;5;124m"[39m)
+
+[0;31mTypeError[0m: Axes.annotate() missing 1 required positional argument: 'text'
+
