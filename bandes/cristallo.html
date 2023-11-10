@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Structure de bandes : du métal à l’isolant &#8212; Physique et Chimie de la Matière</title>
+    <title>Réseau direct, réseau réciproque (rappels) &#8212; Physique et Chimie de la Matière</title>
   
   
   
@@ -157,18 +157,22 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../electron_libre/electron_onde.html">Chapitre 1 : Electrons libres</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../solide/solide.html">Décrire l’état d’un solide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../electron_libre/electron_libre.html">Modèle de l’électrons libres dans un édifice 3D</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../electron_libre/electron_onde.html">Décrire le comportement d’un électron comme une onde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../electron_libre/schroedinger.html">Mouvement de l’électron libre : équation de Schrödinger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../electron_libre/solution_3D.html">Etats des électrons libres dans un édifice 3D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../electron_libre/population_statistique.html">Densité d’états</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="chapitre2_structure_de_bandes.html">Chapitre 2 : Structure de bandes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="md/cristallo.html">Structure de bandes : du métal à l’isolant</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="structure_de_bandes.html">Structure de bandes : du métal à l’isolant</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="md/cristallo.html">Réseau direct, réseau réciproque (rappels)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CLF-CLP.html">Conditions limites fixes et périodiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="md/porteurs_libres.html">Porteurs libres dans un semiconducteur</a></li>
 <li class="toctree-l2"><a class="reference internal" href="md/dopage.html">Dopage d’un semiconducteur</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../lcao/chapitre3_liaisons_fortes.html">Chapitre 3 : Modèle des liaisons fortes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lcao/chapitre3_liaisons_fortes.html">Modèle des liaisons fortes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lcao/md/hydrogene.html">Orbitales hydrogénoïdes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lcao/md/lcao.html">Combinaison linéaire d’orbitales atomiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lcao/md/relation_dispersion.html">Relation de dispersion</a></li>
@@ -357,7 +361,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Structure de bandes : du métal à l’isolant</h1>
+    <h1>Réseau direct, réseau réciproque (rappels)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,14 +371,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-limites-fixes-et-periodiques">Conditions limites fixes et périodiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-direct-reseau-reciproque-rappels">Réseau direct, réseau réciproque (rappels)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-minimale">Définition minimale</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-direct">Réseau direct</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-reciproque">Réseau réciproque</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zone-de-brillouin">Zone de Brillouin</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-minimale">Définition minimale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-direct">Réseau direct</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-reciproque">Réseau réciproque</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zone-de-brillouin">Zone de Brillouin</a></li>
 </ul>
 </li>
 </ul>
@@ -388,18 +388,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="structure-de-bandes-du-metal-a-l-isolant">
-<h1>Structure de bandes : du métal à l’isolant<a class="headerlink" href="#structure-de-bandes-du-metal-a-l-isolant" title="Permalink to this heading">#</a></h1>
-<section id="conditions-limites-fixes-et-periodiques">
-<h2>Conditions limites fixes et périodiques<a class="headerlink" href="#conditions-limites-fixes-et-periodiques" title="Permalink to this heading">#</a></h2>
-<p>A suivre…</p>
-</section>
-<section id="reseau-direct-reseau-reciproque-rappels">
-<h2>Réseau direct, réseau réciproque (rappels)<a class="headerlink" href="#reseau-direct-reseau-reciproque-rappels" title="Permalink to this heading">#</a></h2>
+  <section id="reseau-direct-reseau-reciproque-rappels">
+<h1>Réseau direct, réseau réciproque (rappels)<a class="headerlink" href="#reseau-direct-reseau-reciproque-rappels" title="Permalink to this heading">#</a></h1>
 <section id="definition-minimale">
-<h3>Définition minimale<a class="headerlink" href="#definition-minimale" title="Permalink to this heading">#</a></h3>
+<h2>Définition minimale<a class="headerlink" href="#definition-minimale" title="Permalink to this heading">#</a></h2>
 <section id="reseau-direct">
-<h4>Réseau direct<a class="headerlink" href="#reseau-direct" title="Permalink to this heading">#</a></h4>
+<h3>Réseau direct<a class="headerlink" href="#reseau-direct" title="Permalink to this heading">#</a></h3>
 <p>Un édifice cristallin infini se caractérise par la répétition à l’identique d’un motif atomique dans toutes les directions de l’espace.</p>
 <blockquote>
 <div><p>Cristal = Réseau + Motif</p>
@@ -423,7 +417,7 @@ f (\vec{r} + \vec{T} ) = f (\vec{r}),\qquad \forall\, \mathrm{propri\acute{e}t\a
 \]</div>
 </section>
 <section id="reseau-reciproque">
-<h4>Réseau réciproque<a class="headerlink" href="#reseau-reciproque" title="Permalink to this heading">#</a></h4>
+<h3>Réseau réciproque<a class="headerlink" href="#reseau-reciproque" title="Permalink to this heading">#</a></h3>
 <p>Le réseau réciproque est une représentation équivalente du réseau direct.
 Elle consiste à le décrire non plus par les distances qui séparent les n\oeuds dans chaque direction de l’espace mais par le nombre de n\oeuds par unité de longueur dans chaque direction de l’espace.
 Le réseau réciproque est ainsi une version en fréquence spatiale de l’édifice.</p>
@@ -455,10 +449,9 @@ Le réseau réciproque est ainsi une version en fréquence spatiale de l’édif
 \end{split}\]</div>
 </section>
 <section id="zone-de-brillouin">
-<h4>Zone de Brillouin<a class="headerlink" href="#zone-de-brillouin" title="Permalink to this heading">#</a></h4>
-<p>La zone de Brillouin est le volume de l’espace réciproque délimité par les plan médiateurs des segments joignant 2 noeuds voisins du réseau réciproque.
+<h3>Zone de Brillouin<a class="headerlink" href="#zone-de-brillouin" title="Permalink to this heading">#</a></h3>
+<p>La zone de Brillouin est le <strong>volume de l’espace réciproque délimité par les plans médiateurs des segments joignant 2 noeuds voisins</strong> du réseau réciproque.
 Par construction, son volume est celui de la maille primitive du réseau réciproque et elle contient toutes les symétries du réseau.</p>
-</section>
 </section>
 </section>
 </section>
@@ -512,14 +505,10 @@ Par construction, son volume est celui de la maille primitive du réseau récipr
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-limites-fixes-et-periodiques">Conditions limites fixes et périodiques</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-direct-reseau-reciproque-rappels">Réseau direct, réseau réciproque (rappels)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-minimale">Définition minimale</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-direct">Réseau direct</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-reciproque">Réseau réciproque</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zone-de-brillouin">Zone de Brillouin</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-minimale">Définition minimale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-direct">Réseau direct</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reseau-reciproque">Réseau réciproque</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zone-de-brillouin">Zone de Brillouin</a></li>
 </ul>
 </li>
 </ul>
