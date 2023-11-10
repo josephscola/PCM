@@ -1,8 +1,3 @@
-# Structure de bandes : du métal à l'isolant
-
-## Conditions limites fixes et périodiques
-A suivre...
-
 ## Réseau direct, réseau réciproque (rappels)
 
 ### Définition minimale

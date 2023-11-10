@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'electron_libre/population_statistique';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Chapitre 2 : Structure de bandes" href="../bandes/chapitre2_structure_de_bandes.html" />
+    <link rel="next" title="Structure de bandes : du métal à l’isolant" href="../bandes/structure_de_bandes.html" />
     <link rel="prev" title="Etats des électrons libres dans un édifice 3D" href="solution_3D.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -159,18 +159,22 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="electron_onde.html">Chapitre 1 : Electrons libres</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../solide/solide.html">Décrire l’état d’un solide</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="electron_libre.html">Modèle de l’électrons libres dans un édifice 3D</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="electron_onde.html">Décrire le comportement d’un électron comme une onde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schroedinger.html">Mouvement de l’électron libre : équation de Schrödinger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="solution_3D.html">Etats des électrons libres dans un édifice 3D</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Densité d’états</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../bandes/chapitre2_structure_de_bandes.html">Chapitre 2 : Structure de bandes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../bandes/md/cristallo.html">Structure de bandes : du métal à l’isolant</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../bandes/structure_de_bandes.html">Structure de bandes : du métal à l’isolant</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bandes/md/cristallo.html">Réseau direct, réseau réciproque (rappels)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bandes/CLF-CLP.html">Conditions limites fixes et périodiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../bandes/md/porteurs_libres.html">Porteurs libres dans un semiconducteur</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../bandes/md/dopage.html">Dopage d’un semiconducteur</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../lcao/chapitre3_liaisons_fortes.html">Chapitre 3 : Modèle des liaisons fortes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lcao/chapitre3_liaisons_fortes.html">Modèle des liaisons fortes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lcao/md/hydrogene.html">Orbitales hydrogénoïdes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lcao/md/lcao.html">Combinaison linéaire d’orbitales atomiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lcao/md/relation_dispersion.html">Relation de dispersion</a></li>
@@ -400,28 +404,18 @@ g(\vec{k}) = \frac{2}{\pi^D/V}.
 <section id="densite-g-mathcal-e">
 <h2>Densité <span class="math notranslate nohighlight">\(g(\mathcal{E})\)</span><a class="headerlink" href="#densite-g-mathcal-e" title="Permalink to this heading">#</a></h2>
 <p>Il est commode de décrire les électrons par leur énergie de sorte qu’on définit également la <strong>densité d’états</strong> en fonction de l’énergie.</p>
-<p>Dans un édifice à 3D, on l’exprime en exprimant le nombre d’états d’énergie comprise entre <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> et <span class="math notranslate nohighlight">\(\mathcal{E}+\mathrm{d}\mathcal{E}\)</span> comme le nombre d’états dans le 1/8<span class="math notranslate nohighlight">\(^\mathrm{ème}\)</span> de coquille sphérique de rayons intérieur et extérieur <span class="math notranslate nohighlight">\(k\)</span> et <span class="math notranslate nohighlight">\(k+\mathrm{d}k\)</span>,</p>
+<p>Soit, dans un édifice à 3D, <span class="math notranslate nohighlight">\(g(\mathcal{E}) \mathrm{d}\mathcal{E}\)</span> le nombre d’états dont l’énergie est comprise entre <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> et <span class="math notranslate nohighlight">\(\mathcal{E}+\mathrm{d}\mathcal{E}\)</span>.
+Les états occupés par les électrons, supposés libres, ont des vecteurs d’ondes dont la norme est comprise entre <span class="math notranslate nohighlight">\(k\)</span> et <span class="math notranslate nohighlight">\(k + \mathrm{d}k\)</span>.
+La composante de <span class="math notranslate nohighlight">\(\vec{k}\)</span> ne pouvant être négative, ces états occupent donc un huitième de coquille sphérique de rayons intérieur et extérieur <span class="math notranslate nohighlight">\(k\)</span> et <span class="math notranslate nohighlight">\(k+\mathrm{d}k\)</span>, respectivement, et de volume <span class="math notranslate nohighlight">\(\mathrm{d}V_\mathrm{coq}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}V_\mathrm{coq} = \frac{1}{8} 4\pi k^2 \mathrm{d}k.
+\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
 g^{(3D)}(\mathcal{E}) \mathrm{d}\mathcal{E} &amp;= g^{(3D)}(k) \frac{4 \pi k^2 \mathrm{d}k}{8} \\
 \Rightarrow g^{(3D)}(\mathcal {E}) &amp;= \frac{V}{2\pi^2} \left(\frac{2m}{\hbar^2}\right)^{3/2} \mathcal{E}^{1/2}
-\end{align}
-\end{split}\]</div>
-<p>Soit <span class="math notranslate nohighlight">\(g(\mathcal{E}) \mathrm{d}\mathcal{E}\)</span> le nombre d’états dont l’énergie est comprise dans l’intervalle <span class="math notranslate nohighlight">\([\mathcal{E}, \mathcal{E}\mathrm{d}\mathcal{E}]\)</span>.
-L’énergie <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> des électrons libres étant identique à leur énergie cinétique <span class="math notranslate nohighlight">\(\frac{\hbar^2k^2}{2m}\)</span>, les vecteurs d’onde des états correspondants ont une norme comprise dans l’intervalle <span class="math notranslate nohighlight">\([k;k+\mathrm{d}k]\)</span> qui définit un huitième de coquille sphérique de volume <span class="math notranslate nohighlight">\(\mathrm{d}V_\mathrm{coq}\)</span> :</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{d}V_\mathrm{coq} = \frac{1}{8} 4\pi k^2 \mathrm{d}k.
-\]</div>
-<p>On exprime alors :</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-g(\mathcal{E}) \mathrm{d}\mathcal{E} &amp;= g(\vec{k})\mathrm{d}V_\mathrm{coq} \\
-g(\mathcal{E}) \frac{\hbar^2}{m}k\mathrm{d}k &amp;= \frac{2}{\pi^3V} \frac{1}{2} \pi k^2 \mathrm{d}k \\
-\rightarrow g(\mathcal{E})                   &amp;= \frac{m}{\hbar^2}\frac{k}{\pi^2V} \\
-                                             &amp;= \frac{m}{\hbar^2}\frac{(2m/\hbar^2\mathcal{E})^{1/2}}{\pi^2V}
 \end{align}
 \end{split}\]</div>
 </section>
@@ -474,7 +468,7 @@ f_\mathrm{FD} (\mathcal{E}) = \frac {1}{1 + e^{(\mathcal{E}-\mathcal{E}_F)/k_BT}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_17216/606536689.py:8: RuntimeWarning: overflow encountered in exp
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_18571/606536689.py:8: RuntimeWarning: overflow encountered in exp
   return 1 / (1 + np.exp ((E-1)/kBT))
 </pre></div>
 </div>
@@ -610,11 +604,11 @@ L’<em>étalement</em> de la distribution de probabilité induit part l’agita
       </div>
     </a>
     <a class="right-next"
-       href="../bandes/chapitre2_structure_de_bandes.html"
+       href="../bandes/structure_de_bandes.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chapitre 2 : Structure de bandes</p>
+        <p class="prev-next-title">Structure de bandes : du métal à l’isolant</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

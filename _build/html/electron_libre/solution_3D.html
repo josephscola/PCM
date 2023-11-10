@@ -167,13 +167,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="population_statistique.html">Densité d’états</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../bandes/chapitre2_structure_de_bandes.html">Structure de bandes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../bandes/md/cristallo.html">Structure de bandes : du métal à l’isolant</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../bandes/structure_de_bandes.html">Structure de bandes : du métal à l’isolant</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bandes/md/cristallo.html">Réseau direct, réseau réciproque (rappels)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bandes/CLF-CLP.html">Conditions limites fixes et périodiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../bandes/md/porteurs_libres.html">Porteurs libres dans un semiconducteur</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../bandes/md/dopage.html">Dopage d’un semiconducteur</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../lcao/chapitre3_liaisons_fortes.html">Chapitre 3 : Modèle des liaisons fortes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lcao/chapitre3_liaisons_fortes.html">Modèle des liaisons fortes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lcao/md/hydrogene.html">Orbitales hydrogénoïdes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lcao/md/lcao.html">Combinaison linéaire d’orbitales atomiques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lcao/md/relation_dispersion.html">Relation de dispersion</a></li>
@@ -414,7 +415,7 @@ Sans erte de généralité, on considérera un édifice parallélépipédique de
 <p>On cherche des solutions de la forme:</p>
 <div class="math notranslate nohighlight">
 \[ \psi (x,y,z) = \psi_x(x) \psi_y(y) \psi_z(z)\]</div>
-<p>L’équation de Schrödinger peut alors être séparée en 3 équations indépendnantes correspondant à chacune des 3 directions de l’espace :</p>
+<p>L’équation de Schrödinger peut alors être séparée en 3 équations indépendantes correspondant à chacune des 3 directions de l’espace :</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\hbar^2}{2m} \frac{\partial ^2 \psi_\alpha}{\partial \alpha^2} + \mathcal{E}_\alpha \psi_\alpha,
@@ -424,7 +425,7 @@ Sans erte de généralité, on considérera un édifice parallélépipédique de
 <div class="math notranslate nohighlight">
 \[
 \psi_\alpha (\alpha) = A e^{ik_\alpha \alpha} + B e^{-ik_\alpha \alpha},
-\quad A, B \in \mathbb{C},\, \forall \alpha \in [0,L_\alpha]
+\quad A, B \in \mathbb{C},\, \forall \alpha \in [0,L_\alpha],\, \alpha = x,y,z
 \]</div>
 <p>La condition au premier bord (<span class="math notranslate nohighlight">\(\psi_\alpha (0) = 0\)</span>) impose <span class="math notranslate nohighlight">\(A + B =0\)</span>.
 Il s’ensuit que la condition au second bord (<span class="math notranslate nohighlight">\(\psi_\alpha (L_\alpha) = 0\)</span>) s’exprime :</p>
