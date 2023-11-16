@@ -66,6 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'bandes/presque_libres';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Conditions limites fixes et périodiques" href="CLF-CLP.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../solide/solide.html">Décrire l’état d’un solide</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../electron_libre/electron_libre.html">Modèle de l’électrons libres dans un édifice 3D</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../electron_libre/electron_onde.html">Décrire le comportement d’un électron comme une onde</a></li>
@@ -165,17 +166,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../electron_libre/population_statistique.html">Densité d’états</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="structure_de_bandes.html">Structure de bandes : du métal à l’isolant</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="structure_de_bandes.html">Structure de bandes : du métal à l’isolant</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="md/cristallo.html">Réseau direct, réseau réciproque (rappels)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CLF-CLP.html">Conditions limites fixes et périodiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="md/porteurs_libres.html">Porteurs libres dans un semiconducteur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="md/dopage.html">Dopage d’un semiconducteur</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../lcao/chapitre3_liaisons_fortes.html">Modèle des liaisons fortes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lcao/md/hydrogene.html">Orbitales hydrogénoïdes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lcao/md/lcao.html">Combinaison linéaire d’orbitales atomiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lcao/md/relation_dispersion.html">Relation de dispersion</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Electrons presque libres et bande d’énergie interdite</a></li>
 </ul>
 </li>
 </ul>
@@ -371,7 +365,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrons-libres-dans-un-potentiel-presque-nul">Electrons libres dans un potentiel presque nul</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrons-libres-dans-un-potentiel-presque-nul">Electrons libres dans un potentiel presque nul</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#er-cas-k-petit">1er cas : <span class="math notranslate nohighlight">\(k\)</span> petit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eme-cas-k-voisin-du-bord-de-la-pzb">2ème cas : <span class="math notranslate nohighlight">\(k\)</span> voisin du bord de la PZB</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bande-interdite">Bande interdite</a></li>
 </ul>
             </nav>
         </div>
@@ -383,12 +382,102 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="electrons-presque-libres-et-bande-d-energie-interdite">
+  <section class="tex2jax_ignore mathjax_ignore" id="electrons-presque-libres-et-bande-d-energie-interdite">
 <h1>Electrons presque libres et bande d’énergie interdite<a class="headerlink" href="#electrons-presque-libres-et-bande-d-energie-interdite" title="Permalink to this heading">#</a></h1>
 <p>Ou pourquoi les électrons de valence n’assurent aucune conduction électrique dans les isolants ?</p>
 <section id="electrons-libres-dans-un-potentiel-presque-nul">
 <h2>Electrons libres dans un potentiel presque nul<a class="headerlink" href="#electrons-libres-dans-un-potentiel-presque-nul" title="Permalink to this heading">#</a></h2>
-<p>Considérons une rangée régulière d’atomes, de paramètre de maille <span class="math notranslate nohighlight">\(a\)</span> et un électron libre de fonction d’onde <span class="math notranslate nohighlight">\(\psi (x) = A e^{ikx}\)</span></p>
+<p>Les conditions limites périodiques autorise des composantes négatives aux vecteurs d’onde.
+Les états électroniques peuvent donc être vus comme des ondes planes se propageant suivant <span class="math notranslate nohighlight">\(\vec{k}\)</span>.</p>
+<p>Considérons de tels états se propageant dans l’édifice cristallin.</p>
+<p>Deux cas de figures se présentent suivant la norme du vecteur d’onde</p>
+<section id="er-cas-k-petit">
+<h3>1er cas : <span class="math notranslate nohighlight">\(k\)</span> petit<a class="headerlink" href="#er-cas-k-petit" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+k \ll \frac{1}{2}\Vert\vec{A}\Vert
+\]</div>
+<p>La longueur d’onde avoisine la taille de l’échantillon s’étend donc sur un très grand nombre de mailles.
+Le détail du potentiel atomique échappe à l’état électronique qui intéragit avec une version du potentiel moyennée sur un grand nombre de mailles.
+Le potentiel effectif est donc presque constant et les états électroniques sont anaolgues à ceux des électrons libres.</p>
+</section>
+<section id="eme-cas-k-voisin-du-bord-de-la-pzb">
+<h3>2ème cas : <span class="math notranslate nohighlight">\(k\)</span> voisin du bord de la PZB<a class="headerlink" href="#eme-cas-k-voisin-du-bord-de-la-pzb" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+k \approx  \frac{1}{2}\Vert\vec{A}\Vert
+\]</div>
+<p>La longueur d’onde est voisine du paramètre de maille et l’intéraction onde-cristal se manifeste par sa <strong>diffraction</strong>.
+Le vecteur de l’onde électronique diffractée vérifie  <span class="math notranslate nohighlight">\(\vec{k} - \vec{k}^\prime = \vec{g}\)</span>.
+On montre qu’une <strong>condition nécessaire et suffisante pour que cette condition soit vérifiée est que les vecteurs <span class="math notranslate nohighlight">\(\vec{k}\)</span> et <span class="math notranslate nohighlight">\(\vec{k}^\prime\)</span> pointent sur les bords d’une zone de Brillouin</strong>.</p>
+<p>Pour simplifier la suite de la démonstration, on considérera des états dirigés suivant l’axe cristallographique <span class="math notranslate nohighlight">\(\vec{a}\)</span>.
+Le vecteur d’onde incident vaut alors <span class="math notranslate nohighlight">\(\vec{k} = \frac{1}{2} \vec{A}\)</span> et on choisit le vecteur réciproque <span class="math notranslate nohighlight">\(\vec{g} = \vec{A}\)</span>, sans perte de généralité.
+Le vecteur d’onde diffracté s’exprime alors :</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{k}^\prime = -\frac{1}{2} \vec{A} \equiv -\vec{k}
+\]</div>
+<p>L’onde diffractée est donc une onde se propageant dans la même direction mais en sens contraire de l’onde incidente.
+Réciproquement, <span class="math notranslate nohighlight">\(\vec{k}\)</span> est l’onde diffractée de l’onde de vecteur d’onde <span class="math notranslate nohighlight">\(\vec{k}^\prime\)</span>.
+La relation entre ces deux ondes impose qu’elles ont la même amplitude <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>Dès lors que les états de vecteur d’onde <span class="math notranslate nohighlight">\(k\)</span> sont peuplés, les deux états électroniques coexistent se superposent pour produire les deux états liés suivants:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\psi_1 &amp;= \alpha \left( e^{ikx} + e^{-ikx} \right) \\
+\psi_2 &amp;= \alpha \left( e^{ikx} - e^{-ikx} \right) 
+\end{align}
+\end{split}\]</div>
+<p>Les densités électroniques <span class="math notranslate nohighlight">\(n_1(x)\)</span> et <span class="math notranslate nohighlight">\(n_2(x)\)</span> associées à ces deux états s’expriment :
+$<span class="math notranslate nohighlight">\(
+\begin{align}
+n_1 (x) &amp;\equiv \psi_1 \psi_1^* = 4\alpha (1 + \cos \frac{2\pi}{a}x) \\
+n_2 (x) &amp;\equiv \psi_2 \psi_2^* = 4\alpha (1 - \cos \frac{2\pi}{a}x)
+\end{align}
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span> <span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">n1</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span> <span class="p">([])</span>
+<span class="n">axT</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span> <span class="p">()</span>
+<span class="n">axT</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span> <span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;2a&#39;</span><span class="p">,</span> <span class="s1">&#39;3a&#39;</span><span class="p">,</span> <span class="s1">&#39;4a&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span> <span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="s1">&#39;$n_2 (x)$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">)</span>
+<span class="n">axT</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="s1">&#39;$n_1(x)$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span> <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d6b804764bdf6c5aa1951affa9eee4bf5d35a32a945f6ee05a051eab13172aa0.png" src="../_images/d6b804764bdf6c5aa1951affa9eee4bf5d35a32a945f6ee05a051eab13172aa0.png" />
+</div>
+</div>
+<p>Ces densités indiquent que la charge portée par ces états électroniques est distribuée dans l’espace avec la même périodicité que le réseau:</p>
+<ul class="simple">
+<li><p>la charge de l’état <span class="math notranslate nohighlight">\(\psi_1\)</span> est localisée à mi-chemin entre deux nœuds,</p></li>
+<li><p>la charge de l’état <span class="math notranslate nohighlight">\(\psi_2\)</span> est localisée sur les nœuds du réseau.</p></li>
+</ul>
+<p>L’intéraction électro-statique favorise donc l’état <span class="math notranslate nohighlight">\(\psi_2\)</span> qui minimise la distance entre la charge électronique négative et la charge ionique dispoée sur les nœuds du réseau.
+Il en résulte que pour les vecteurs d’onde pour lesquels une diffraction se produit (ici <span class="math notranslate nohighlight">\(k = \frac{\pi}{a}\)</span>) il existe deux états d’énergies distinctes.
+Aucun état d’énergie intermédiaire ne peut donc exister.</p>
+</section>
+</section>
+<section id="bande-interdite">
+<h2>Bande interdite<a class="headerlink" href="#bande-interdite" title="Permalink to this heading">#</a></h2>
+<p>Le même phénomène se reproduit pour tous les couples de vecteurs d’onde <span class="math notranslate nohighlight">\(\vec{k}\)</span> et <span class="math notranslate nohighlight">\(\vec{k}^\prime\)</span> en condition de diffraction, c’est-à-dire lorsque tels que <span class="math notranslate nohighlight">\(\vec{k} - \vec{k}^\prime = \vec{g}  \in \{\mathrm{r\acute{e}seau\,r\acute{e}ciproque} \}\)</span>.
+des discontinuités dans la relation de dispersion <span class="math notranslate nohighlight">\(\mathcal{E}(\vec{k})\)</span> sont ainsi introduite au franchissement des zones de Brillouin.
+Il existe des valeurs d’énergie auxquelles ne correspondent aucun vecteur d’onde : l’intervalle de ces énergies inaccessibles aux états électroniques est appelée la <strong>bande interdite</strong>.</p>
+<p>L’étendue de bande interdite est directement proportionnelle à l’intensité du potentiel pour la périodicité considérée, c’est-à-dire l’amplitude de la fonction <span class="math notranslate nohighlight">\(\cos kx\)</span> qui décrit au mieux le potentiel <span class="math notranslate nohighlight">\(V_\mathrm{at}(x)\)</span>.</p>
+<p>La configuration de ces bandes d’énergie permises et interdites constitue la <strong>structure de bande</strong> du matériaux et caractérise complétement ses propriétés électroniques.</p>
 </section>
 </section>
 
@@ -423,6 +512,15 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="CLF-CLP.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Conditions limites fixes et périodiques</p>
+      </div>
+    </a>
 </div></div>
   
 </div>
@@ -441,7 +539,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrons-libres-dans-un-potentiel-presque-nul">Electrons libres dans un potentiel presque nul</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrons-libres-dans-un-potentiel-presque-nul">Electrons libres dans un potentiel presque nul</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#er-cas-k-petit">1er cas : <span class="math notranslate nohighlight">\(k\)</span> petit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eme-cas-k-voisin-du-bord-de-la-pzb">2ème cas : <span class="math notranslate nohighlight">\(k\)</span> voisin du bord de la PZB</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bande-interdite">Bande interdite</a></li>
 </ul>
   </nav></div>
 

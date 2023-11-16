@@ -15,4 +15,11 @@ chapters:
   sections:
   - file: bandes/md/cristallo
   - file: bandes/CLF-CLP
-  - file: bandes/presque_libres
+  - file: bandes/md/porteurs_libres
+  - file: bandes/md/dopage  
+- file: lcao/chapitre3_liaisons_fortes
+  sections:
+  - file: lcao/md/hydrogene
+  - file: lcao/md/lcao
+  - file: lcao/md/relation_dispersion
+
