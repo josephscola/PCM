@@ -59,11 +59,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'electron_libre/population_statistique';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'electron_libre/population_statistique_source';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Structure de bandes : du métal à l’isolant" href="../bandes/structure_de_bandes.html" />
-    <link rel="prev" title="Etats des électrons libres dans un édifice 3D" href="solution_3D.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -126,6 +124,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -181,14 +181,14 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../competences_PCM.html">Objectifs pédagogiques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../solide/solide.html">Décrire l’état d’un solide</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="electron_libre.html">Modèle de l’électrons libres dans un édifice 3D</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="electron_libre.html">Modèle de l’électrons libres dans un édifice 3D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="electron_onde.html">Décrire le comportement d’un électron comme une onde</a></li>
 <li class="toctree-l2"><a class="reference internal" href="schroedinger.html">Mouvement de l’électron libre : équation de Schrödinger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="solution_3D.html">Etats des électrons libres dans un édifice 3D</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Densité d’états</a></li>
+<li class="toctree-l2"><a class="reference internal" href="population_statistique.html">Densité d’états</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../bandes/structure_de_bandes.html">Structure de bandes : du métal à l’isolant</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -268,7 +268,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectron_libre/population_statistique.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectron_libre/population_statistique_source.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +298,7 @@
       
       
       
-      <li><a href="../_sources/electron_libre/population_statistique.ipynb" target="_blank"
+      <li><a href="../_sources/electron_libre/population_statistique_source.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -449,7 +449,47 @@ Autrement dit un état donné, défini par ses nombres quantiques, ne peut être
 \[
 f_\mathrm{FD} (\mathcal{E}) = \frac {1}{1 + e^{(\mathcal{E}-\mathcal{E}_F)/k_BT}}
 \]</div>
-<p><img alt="" src="../_images/Fermi-Dirac.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">E</span> <span class="o">/=</span> <span class="n">mu</span>
+
+<span class="k">def</span> <span class="nf">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span> <span class="p">((</span><span class="n">E</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">kBT</span><span class="p">))</span>
+
+    
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span> <span class="p">()</span>
+<span class="n">kBT</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;$T$ = 0 K&#39;</span><span class="p">)</span>
+
+<span class="n">kBT</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$k_BT = \mathcal</span><span class="si">{E}</span><span class="s1">_F/10$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span>  <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span> <span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">xmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">+</span><span class="n">kBT</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span> <span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">),</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.02</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$(\mathcal </span><span class="si">{E}</span><span class="s1">+2k_BT)/\mathcal</span><span class="si">{E}</span><span class="s1">_F$&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span> <span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">xmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">-</span> <span class="n">kBT</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">)</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">f_FD</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kBT</span><span class="p">,</span> <span class="n">kBT</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.08</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$(\mathcal </span><span class="si">{E}</span><span class="s1">-2k_BT)/\mathcal</span><span class="si">{E}</span><span class="s1">_F$&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mathcal</span><span class="si">{E}</span><span class="s1">/\mathcal</span><span class="si">{E}</span><span class="s1">_F$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$f_</span><span class="si">{FD}</span><span class="s1"> (\mathcal</span><span class="si">{E}</span><span class="s1">/\mathcal</span><span class="si">{E}</span><span class="s1">_F)$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.02</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span> <span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span> <span class="p">(</span><span class="s1">&#39;Statistique de Fermi-Dirac&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e5d42cf8f7ca9490ba321ddaac17f690fddb0699db05594b3a518dd77060f171.png" src="../_images/e5d42cf8f7ca9490ba321ddaac17f690fddb0699db05594b3a518dd77060f171.png" />
+</div>
+</div>
 <p>A température nulle, le taux d’occupation passe brutalement de 1 (tous les états d’énergie <span class="math notranslate nohighlight">\(\mathcal{E}&lt;\mathcal{E}_F\)</span> sont occupés) à 0 (tous les états <span class="math notranslate nohighlight">\(\mathcal{E}&gt;\mathcal{E}_F\)</span> sont vides).
 A mesure que la température augmente, la fonction s’adoucit : sur l’intervalle de largeur <span class="math notranslate nohighlight">\(4k_BT\)</span> centré sur <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span>, le taux d’occupation varie de 90 % à 10 %.
 La fonction est donc d’autant plus étalée que la température est élevée.</p>
@@ -494,7 +534,47 @@ k_F = (3\pi^2 n)^{1/3}.
 <h2>Etats occupés<a class="headerlink" href="#etats-occupes" title="Link to this heading">#</a></h2>
 <p>La statistique de Fermi-Dirac indique qu’à température nulle, les états occupés sont ceux de plus faibles énergies, soit les états dont l’énergie appartient à l’intervalle <span class="math notranslate nohighlight">\([0;\mathrm{E}_F]\)</span>.
 L’<em>étalement</em> de la distribution de probabilité induit part l’agitation thermique conduit à ce que des états occupés soient libérés par des électrons excités dans des états d’énergie supérieur à <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span>.</p>
-<p><img alt="" src="../_images/band_occupation.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">g</span> <span class="p">(</span><span class="n">E</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span> <span class="p">(</span><span class="n">E</span><span class="p">)</span>
+
+<span class="n">kBT</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span> <span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">g</span> <span class="p">(</span><span class="n">E</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">axxlim</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xlim</span> <span class="p">()</span>
+<span class="n">axylim</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span> <span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.99</span><span class="o">/</span><span class="n">axylim</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span> <span class="o">=</span> <span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">))</span>
+
+<span class="c1">#ax.plot (E, g (E) * f_FD (E, kBT), color = &#39;C2&#39;)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">g</span> <span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">*</span> <span class="n">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="s2">&quot;densité d&#39;états&quot;</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span> <span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">f_FD</span> <span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">kBT</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span> <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;taux d&#39;occupation $f_\mathrm</span><span class="si">{FD}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.98</span><span class="o">*</span><span class="n">axxlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.8</span><span class="o">*</span><span class="n">axxlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.2</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span> <span class="o">=</span> <span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mathcal</span><span class="si">{E}</span><span class="s1">/\mathcal</span><span class="si">{E}</span><span class="s1">_F$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Etats occupés par des électrons libres dans un édifice 3D&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.02</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e3c8d893e8b2a65a5482c14a69776d5fee0da7d6325d890ff1134621f9ccf85f.png" src="../_images/e3c8d893e8b2a65a5482c14a69776d5fee0da7d6325d890ff1134621f9ccf85f.png" />
+</div>
+</div>
 </section>
 </section>
 
@@ -528,24 +608,6 @@ L’<em>étalement</em> de la distribution de probabilité induit part l’agita
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="solution_3D.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Etats des électrons libres dans un édifice 3D</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../bandes/structure_de_bandes.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Structure de bandes : du métal à l’isolant</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               

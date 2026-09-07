@@ -59,11 +59,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'solide/solide';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solide/solide_source';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Modèle de l’électrons libres dans un édifice 3D" href="../electron_libre/electron_libre.html" />
-    <link rel="prev" title="Objectifs pédagogiques" href="../competences_PCM.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -126,6 +124,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -181,9 +181,9 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../competences_PCM.html">Objectifs pédagogiques</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Décrire l’état d’un solide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solide.html">Décrire l’état d’un solide</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../electron_libre/electron_libre.html">Modèle de l’électrons libres dans un édifice 3D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../electron_libre/electron_onde.html">Décrire le comportement d’un électron comme une onde</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../electron_libre/schroedinger.html">Mouvement de l’électron libre : équation de Schrödinger</a></li>
@@ -268,7 +268,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsolide/solide.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsolide/solide_source.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +298,7 @@
       
       
       
-      <li><a href="../_sources/solide/solide.ipynb" target="_blank"
+      <li><a href="../_sources/solide/solide_source.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -458,17 +458,64 @@ document.write(`
 \[
 \mathcal{E} = \mathcal{E}_{cin} + \mathcal{E}_{pot}
 \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.constants</span> <span class="k">as</span> <span class="nn">phys</span>
+<span class="kn">from</span> <span class="nn">mendeleev</span> <span class="kn">import</span> <span class="n">Si</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">scipy.constants</span> <span class="k">as</span> <span class="nn">phys</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">mendeleev</span> <span class="kn">import</span> <span class="n">Si</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;mendeleev&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pc</span> <span class="o">=</span> <span class="n">phys</span><span class="o">.</span><span class="n">physical_constants</span>
+<span class="n">m0</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;electron mass&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mP</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;proton mass&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ee</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span> <span class="s1">&#39;elementary charge&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;Newtonian constant of gravitation&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">eps0</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;vacuum electric permittivity&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">a0</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;Bohr radius&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\mathcal{E}_{cin}\)</span> représente l’énergie cinétique de l’ensemble des noyaux et des électrons du solide.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\mathcal{E}_{pot}\)</span> rassemble les énergies potentielles desquelles dérivent les forces s’exerçant sur les noyaux et les électrons du solide</p></li>
 </ul>
 <p>Examinons la nature de ces forces.
 Noyaux et électrons portent une masse et une charge :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basics</span>  <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;- masse d&#39;un proton : $m_P$  = &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mP</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> kg</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">basics</span> <span class="o">+=</span> <span class="sa">r</span><span class="s2">&quot;- masse d&#39;un électron : $m_0$ = &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">m0</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> kg</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">basics</span> <span class="o">+=</span> <span class="sa">r</span><span class="s2">&quot;- charge électrique élémentaire : $e $ = &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ee</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> C</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">display</span> <span class="p">(</span><span class="n">Markdown</span> <span class="p">(</span><span class="n">basics</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 <ul class="simple">
-<li><p>masse d’un proton : <span class="math notranslate nohighlight">\(m_P\)</span>  = 1.67e-27 kg</p></li>
-<li><p>masse d’un électron : <span class="math notranslate nohighlight">\(m_0\)</span> = 9.11e-31 kg</p></li>
-<li><p>charge électrique élémentaire : <span class="math notranslate nohighlight">\(e \)</span> = 1.60e-19 C</p></li>
+<li><p>masse d’un proton : $m_P$  = 1.67e-27 kg</p></li>
+<li><p>masse d’un électron : $m_0$ = 9.11e-31 kg</p></li>
+<li><p>charge électrique élémentaire : $e $ = 1.60e-19 C</p></li>
 </ul>
+</div>
+</div>
 <p>Les forces agissant sur les particules constitutives du solide résultent de leurs interaction mutuelles, dont la nature est donc gravitationnelle d’une part et électro-statique d’autre part.</p>
 <p>Deux particules 1 et 2 distante de <span class="math notranslate nohighlight">\(r_{12}\)</span> exercent l’une sur l’autre une attraction gravitationnelle d’intensité :</p>
 <div class="math notranslate nohighlight">
@@ -480,11 +527,27 @@ F_{G} = -\mathcal{G} \frac{m_1 m_2}{r_{12}^2}
 \[
 F_{ES} = \frac{q_1 q_2}{4 \pi \epsilon_0 r_{12}^{2}}
 \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FES</span> <span class="o">=</span> <span class="n">ee</span> <span class="o">*</span> <span class="n">ee</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">eps0</span> <span class="o">/</span> <span class="n">a0</span> <span class="o">/</span> <span class="n">a0</span>
+<span class="n">FGr</span> <span class="o">=</span> <span class="n">G</span> <span class="o">*</span> <span class="n">m0</span> <span class="o">*</span> <span class="n">mP</span> <span class="o">/</span> <span class="n">a0</span> <span class="o">/</span> <span class="n">a0</span>
+<span class="n">text2display</span>  <span class="o">=</span> <span class="s2">&quot;L&#39;ordre de grandeur de ces forces peut être obtenu en prenant l&#39;exemple du proton et de l&#39;électron d&#39;un atome d&#39;hydrogène isolé :</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">text2display</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;- Attraction gravitationnelle entre l&#39;électron d&#39;un atome d&#39;hydrogène et son proton : &quot;</span>
+<span class="n">text2display</span> <span class="o">+=</span> <span class="s1">&#39;$F_</span><span class="si">{G}</span><span class="s1">$ = &#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">FGr</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> N</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+<span class="n">text2display</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;- Attraction électrostatique entre l&#39;électron d&#39;un atome d&#39;hydrogène et son proton : &quot;</span>
+<span class="n">text2display</span> <span class="o">+=</span> <span class="s1">&#39;$F_</span><span class="si">{ES}</span><span class="s1">$ = &#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">FES</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> N&quot;</span>
+<span class="n">display</span> <span class="p">(</span><span class="n">Markdown</span> <span class="p">(</span><span class="n">text2display</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 <p>L’ordre de grandeur de ces forces peut être obtenu en prenant l’exemple du proton et de l’électron d’un atome d’hydrogène isolé :</p>
 <ul class="simple">
-<li><p>Attraction gravitationnelle entre l’électron d’un atome d’hydrogène et son proton : <span class="math notranslate nohighlight">\(F_{G}\)</span> = 3.63e-47 N</p></li>
-<li><p>Attraction électrostatique entre l’électron d’un atome d’hydrogène et son proton : <span class="math notranslate nohighlight">\(F_{ES}\)</span> = 8.24e-08 N</p></li>
+<li><p>Attraction gravitationnelle entre l’électron d’un atome d’hydrogène et son proton : $F_{G}$ = 3.63e-47 N</p></li>
+<li><p>Attraction électrostatique entre l’électron d’un atome d’hydrogène et son proton : $F_{ES}$ = 8.24e-08 N</p></li>
 </ul>
+</div>
+</div>
 <p>Trente-neuf ordres de grandeurs séparent l’intensité de ces deux forces; en d’autres termes, la contribution de l’attraction gravitationnelles entre les particules constitutives d’un solide ne serait détectable qu’à la condition de disposer d’instruments de mesures dont la précision fournirait 39 décimales ou plus !</p>
 <p>C’est la raison pour laquelle le terme <span class="math notranslate nohighlight">\(\mathcal{E}_{pot}\)</span> correspond à l’énergie potentielle électro-statique (ou énergie portentielle de Coulomb) :</p>
 <div class="math notranslate nohighlight">
@@ -514,13 +577,56 @@ L’état du solide est entièrement décrit par le mouvement de ces <span class
 <p>L’état déquilibre du système est défini par la configuration (position + vitesse de chacune des particules du problème) qui <em>minimise</em> l’énergie totale du système.
 Ce problème n’admet de solutions analytiques que pour l’atome d’hydrogène !</p>
 <p>En l’absence de solution analytique, des solutions numériques sont recherchées, mais le temps de calcul diverge dès que le nombre de particules atteint l’ordre de 10<span class="math notranslate nohighlight">\(^6\)</span>.</p>
-<p>Pour une parallélépipède de silicium de 1e-07<span class="math notranslate nohighlight">\(\times\)</span>1e-07<span class="math notranslate nohighlight">\(\times\)</span>1e-07 m<span class="math notranslate nohighlight">\(^3\)</span> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cas du silicium</span>
+<span class="c1"># méthode 1 : masse totale rapportée à la masse d&#39;un atome</span>
+<span class="n">mSi</span> <span class="o">=</span> <span class="n">Si</span><span class="o">.</span><span class="n">atomic_weight</span> <span class="o">*</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;atomic mass constant&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="n">Si</span><span class="o">.</span><span class="n">density</span> <span class="o">*</span> <span class="mf">1e3</span>
+<span class="n">l</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="mf">5e-4</span>
+<span class="n">l</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mf">1e-7</span>
+<span class="n">N1</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">l</span> <span class="o">*</span> <span class="n">L</span> <span class="o">*</span> <span class="n">h</span> <span class="o">/</span> <span class="n">mSi</span>
+
+<span class="c1"># méthode 2 : volume total rapporté au volume d&#39;une maille diamant</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">pc</span> <span class="p">[</span><span class="s1">&#39;lattice parameter of silicon&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">N2</span> <span class="o">=</span> <span class="n">l</span> <span class="o">*</span> <span class="n">L</span> <span class="o">*</span> <span class="n">h</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="mi">8</span> <span class="c1"># maille CFC à 2 atomes par maille unitaire)</span>
+
+<span class="c1"># complexité</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">N_at</span> <span class="o">=</span> <span class="n">N1</span>
+<span class="n">N_objets</span> <span class="o">=</span> <span class="p">(</span><span class="n">Z</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">N_at</span>
+<span class="n">N_operations</span> <span class="o">=</span> <span class="n">N_at</span> <span class="o">+</span> <span class="n">Z</span> <span class="o">*</span> <span class="n">N_at</span> <span class="o">+</span> <span class="n">N_at</span> <span class="o">+</span> <span class="n">Z</span> <span class="o">*</span> <span class="n">N_at</span> <span class="o">+</span> <span class="n">Z</span> <span class="o">*</span> <span class="n">N_at</span> <span class="o">*</span> <span class="n">N_at</span>
+<span class="n">N_objets</span>
+<span class="n">N_operations</span>
+<span class="n">temps_calcul</span> <span class="o">=</span> <span class="n">N_operations</span> <span class="o">/</span> <span class="mf">1e9</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mf">365.25</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span>
+<span class="n">temps_calcul</span> <span class="o">/</span> <span class="n">year</span>
+
+<span class="c1">#report  = r&quot;Pour une plaquette de silicium de $1\times 1$ cm$^2$ et d&#39;un demi millimètre d&#39;épaisseur&quot; + &quot; :\n&quot;</span>
+<span class="n">report</span>  <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Pour une parallélépipède de silicium de </span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s2">.0e</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;$\times$&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">L</span><span class="si">:</span><span class="s2">.0e</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;$\times$&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">h</span><span class="si">:</span><span class="s2">.0e</span><span class="si">}</span><span class="s2"> m$^3$ :</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;- le nombre d&#39;atomes est de l&#39;ordre de </span><span class="si">{</span><span class="n">N_at</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="s2">&quot;- le nombre de particules est $N_</span><span class="si">{part}</span><span class="s2"> = (Z + 1) N = $&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">N_objets</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> nécessitant 6 coordonnées pour chacune</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="s2">&quot;- le nombre d&#39;opérations à réalisé pour connaître l&#39;énergie d&#39;une seule configuration des $N_</span><span class="si">{part}</span><span class="s2">$ est &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">N_operations</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="s2">&quot;- le temps nécessaire pour réaliser ces opérations avec un processeurs à 1 GHz : &quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;$T = $</span><span class="si">{</span><span class="n">temps_calcul</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> s&quot;</span>
+<span class="n">report</span> <span class="o">+=</span> <span class="sa">r</span><span class="s2">&quot;$\approx$&quot;</span> <span class="o">+</span>  <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">temps_calcul</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">year</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> ans&quot;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">temps_calcul</span> <span class="o">/</span> <span class="n">year</span> <span class="o">/</span> <span class="mf">13.8e9</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="n">report</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;, soit </span><span class="si">{</span><span class="n">temps_calcul</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">13.8e9</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> plus long que l&#39;âge de l&#39;univers observable</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+<span class="k">else</span><span class="p">:</span> <span class="n">report</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+<span class="c1">#report += f&quot;1 an = {year:.2e} s&quot;</span>
+<span class="n">display</span> <span class="p">(</span><span class="n">Markdown</span> <span class="p">(</span><span class="n">report</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Pour une parallélépipède de silicium de 1e-07$\times$1e-07$\times$1e-07 m$^3$ :</p>
 <ul class="simple">
 <li><p>le nombre d’atomes est de l’ordre de 5.00e+07</p></li>
-<li><p>le nombre de particules est <span class="math notranslate nohighlight">\(N_{part} = (Z + 1) N = \)</span>7.49e+08 nécessitant 6 coordonnées pour chacune</p></li>
-<li><p>le nombre d’opérations à réalisé pour connaître l’énergie d’une seule configuration des <span class="math notranslate nohighlight">\(N_{part}\)</span> est 3.49e+16</p></li>
-<li><p>le temps nécessaire pour réaliser ces opérations avec un processeurs à 1 GHz : <span class="math notranslate nohighlight">\(T = \)</span>3.49e+07 s<span class="math notranslate nohighlight">\(\\approx\)</span>1.11e+00 ans\n\n”</p></li>
+<li><p>le nombre de particules est $N_{part} = (Z + 1) N = $7.49e+08 nécessitant 6 coordonnées pour chacune</p></li>
+<li><p>le nombre d’opérations à réalisé pour connaître l’énergie d’une seule configuration des $N_{part}$ est 3.49e+16</p></li>
+<li><p>le temps nécessaire pour réaliser ces opérations avec un processeurs à 1 GHz : $T = $3.49e+07 s$\approx$1.11e+00 ans</p></li>
 </ul>
+</div>
+</div>
 </section>
 </section>
 <section id="hypotheses-simplificatrices">
@@ -602,24 +708,6 @@ Il s’avère que ces conditions sont vérifiées dans certaines classes de mat�
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../competences_PCM.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Objectifs pédagogiques</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../electron_libre/electron_libre.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Modèle de l’électrons libres dans un édifice 3D</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
