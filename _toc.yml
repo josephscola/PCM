@@ -4,6 +4,7 @@
 format: jb-book
 root: intro
 chapters:
+- file: competences_PCM
 - file: solide/solide
 - file: electron_libre/electron_libre
   sections:
